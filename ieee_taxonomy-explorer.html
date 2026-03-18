@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IEEE Taxonomy Explorer</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0e14;
+    --surface: #111620;
+    --surface2: #161d2a;
+    --border: #1e2c42;
+    --accent: #00a8ff;
+    --accent2: #00ffc8;
+    --accent3: #f5a623;
+    --text: #c8d6e8;
+    --text-dim: #5a7090;
+    --text-bright: #e8f2ff;
+    --l1: #00a8ff;
+    --l2: #00ffc8;
+    --l3: #9b7fff;
+    --l4: #ff6b6b;
+    --tag-bg: #0d1e32;
+    --search-bg: #0d1520;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header */
+  .header {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--surface);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .logo-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    background: rgba(0,168,255,0.1);
+    border: 1px solid rgba(0,168,255,0.3);
+    padding: 3px 8px;
+    border-radius: 3px;
+  }
+
+  .logo-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-bright);
+    letter-spacing: -0.01em;
+  }
+
+  .logo-sub {
+    font-size: 12px;
+    color: var(--text-dim);
+    font-family: 'IBM Plex Mono', monospace;
+    margin-top: 2px;
+  }
+
+  /* Search */
+  .search-wrap {
+    flex: 1;
+    max-width: 400px;
+    position: relative;
+  }
+
+  .search-input {
+    width: 100%;
+    background: var(--search-bg);
+    border: 1px solid var(--border);
+    color: var(--text-bright);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    padding: 9px 14px 9px 38px;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .search-input::placeholder { color: var(--text-dim); }
+  .search-input:focus { border-color: var(--accent); }
+
+  .search-icon {
+    position: absolute;
+    left: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-dim);
+    font-size: 15px;
+  }
+
+  .search-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--accent2);
+    white-space: nowrap;
+  }
+
+  /* Controls */
+  .controls {
+    display: flex;
+    gap: 8px;
+  }
+
+  .btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    padding: 7px 12px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-dim);
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(0,168,255,0.06);
+  }
+
+  /* Stats bar */
+  .stats-bar {
+    display: flex;
+    gap: 24px;
+    padding: 10px 32px;
+    background: var(--surface2);
+    border-bottom: 1px solid var(--border);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .stat-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+  }
+
+  .stat-label { color: var(--text-dim); }
+  .stat-val { color: var(--text-bright); font-weight: 500; }
+
+  /* Main layout */
+  .main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    height: calc(100vh - 103px);
+  }
+
+  /* Tree panel */
+  .tree-panel {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px 32px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+
+  .tree-panel::-webkit-scrollbar { width: 5px; }
+  .tree-panel::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+  /* Tree items */
+  .tree-node {
+    position: relative;
+  }
+
+  .node-row {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.1s;
+    margin-bottom: 1px;
+  }
+
+  .node-row:hover {
+    background: rgba(255,255,255,0.03);
+  }
+
+  .node-row.highlight {
+    background: rgba(0,168,255,0.08);
+    outline: 1px solid rgba(0,168,255,0.2);
+  }
+
+  .node-indent {
+    display: flex;
+    align-items: stretch;
+    flex-shrink: 0;
+  }
+
+  .indent-line {
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .indent-line::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: var(--border);
+  }
+
+  .node-toggle {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    flex-shrink: 0;
+    margin: 3px 4px 3px 0;
+    color: var(--text-dim);
+    transition: all 0.15s;
+    user-select: none;
+  }
+
+  .node-toggle.has-children {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--text);
+  }
+
+  .node-toggle.has-children:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .node-toggle.open { color: var(--accent); border-color: rgba(0,168,255,0.4); }
+
+  .node-label {
+    font-size: 13px;
+    padding: 5px 8px 5px 2px;
+    flex: 1;
+    line-height: 1.3;
+  }
+
+  .node-label.l0 {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-bright);
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 0.02em;
+  }
+
+  .node-label.l1 {
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .node-label.l2 {
+    color: #8aa8c8;
+    font-size: 12.5px;
+  }
+
+  .node-label.l3 {
+    color: var(--text-dim);
+    font-size: 12px;
+  }
+
+  .node-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 3px;
+    margin-right: 8px;
+    flex-shrink: 0;
+    font-weight: 500;
+  }
+
+  .l0-tag { background: rgba(0,168,255,0.1); color: var(--l1); border: 1px solid rgba(0,168,255,0.2); }
+  .l1-tag { background: rgba(0,255,200,0.07); color: var(--l2); border: 1px solid rgba(0,255,200,0.15); }
+  .l2-tag { background: rgba(155,127,255,0.07); color: var(--l3); border: 1px solid rgba(155,127,255,0.15); }
+
+  .node-children {
+    overflow: hidden;
+    transition: none;
+  }
+
+  .node-children.collapsed {
+    display: none;
+  }
+
+  /* Count badge */
+  .count-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    margin-right: 6px;
+    flex-shrink: 0;
+  }
+
+  /* Mark highlight */
+  mark {
+    background: rgba(245,166,35,0.25);
+    color: var(--accent3);
+    border-radius: 2px;
+    padding: 0 1px;
+  }
+
+  /* Empty state */
+  .empty-state {
+    padding: 48px 32px;
+    text-align: center;
+    color: var(--text-dim);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+  }
+
+  /* No result */
+  .no-result { display: none; }
+  .no-result.visible { display: block; }
+
+  /* Scrollbar styling globally */
+  * { scrollbar-width: thin; scrollbar-color: #1e2c42 transparent; }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">
+    <span class="logo-badge">IEEE</span>
+    <div>
+      <div class="logo-title">Taxonomy Explorer</div>
+      <div class="logo-sub">v1.05 · January 2025 · 3-level hierarchy</div>
+    </div>
+  </div>
+  <div class="search-wrap">
+    <span class="search-icon">⌕</span>
+    <input class="search-input" id="searchInput" type="text" placeholder="Search terms..." autocomplete="off" spellcheck="false">
+  </div>
+  <div class="search-count" id="searchCount"></div>
+  <div class="controls">
+    <button class="btn" onclick="expandAll()">Expand All</button>
+    <button class="btn" onclick="collapseAll()">Collapse All</button>
+  </div>
+</header>
+
+<div class="stats-bar">
+  <div class="stat">
+    <div class="stat-dot" style="background:var(--l1)"></div>
+    <span class="stat-label">Top-level families:</span>
+    <span class="stat-val">~60</span>
+  </div>
+  <div class="stat">
+    <div class="stat-dot" style="background:var(--l2)"></div>
+    <span class="stat-label">Level 2 terms:</span>
+    <span class="stat-val">~600+</span>
+  </div>
+  <div class="stat">
+    <div class="stat-dot" style="background:var(--l3)"></div>
+    <span class="stat-label">Level 3 terms:</span>
+    <span class="stat-val">~2000+</span>
+  </div>
+  <div class="stat">
+    <span class="stat-label">Source:</span>
+    <span class="stat-val">IEEE Thesaurus 2025</span>
+  </div>
+</div>
+
+<div class="main">
+  <div class="tree-panel" id="treePanel">
+    <div class="no-result" id="noResult">No terms match your search.</div>
+    <div id="treeRoot"></div>
+  </div>
+</div>
+
+<script>
+// Full IEEE Taxonomy data (top-level families, L2, L3)
+const TAXONOMY = [
+  {
+    name: "Aerospace systems",
+    children: [
+      { name: "Aircraft", children: ["Aircraft propulsion","Aircraft navigation","Avionics","Helicopters","Unmanned aerial vehicles","Fixed-wing aircraft","Rotary-wing aircraft","Aircraft landing systems","Aircraft communication"] },
+      { name: "Space vehicles", children: ["Satellites","Launch vehicles","Spacecraft propulsion","Reentry vehicles","Space stations","CubeSats"] },
+      { name: "Missiles", children: ["Ballistic missiles","Cruise missiles","Guided weapons","Projectiles"] },
+      { name: "Rocket engines", children: ["Solid propellant rockets","Liquid propellant rockets","Ion propulsion","Plasma propulsion"] },
+      { name: "Radar", children: ["Synthetic aperture radar","Radar signal processing","Radar antennas","Doppler radar","Phased arrays","Radar cross sections"] },
+      { name: "Sonar", children: ["Active sonar","Passive sonar","Underwater acoustics"] }
+    ]
+  },
+  {
+    name: "Antennas",
+    children: [
+      { name: "Antenna arrays", children: ["Phased arrays","MIMO antennas","Adaptive arrays","Massive MIMO"] },
+      { name: "Microstrip antennas", children: ["Patch antennas","Planar antennas","Printed antennas"] },
+      { name: "Dipole antennas", children: ["Half-wave dipole","Folded dipole","Loop antennas"] },
+      { name: "Horn antennas", children: ["Conical horn","Pyramidal horn","Corrugated horn"] },
+      { name: "Aperture antennas", children: ["Reflector antennas","Parabolic reflectors","Slot antennas"] },
+      { name: "Antenna measurements", children: ["Antenna gain","Radiation patterns","Near-field measurements","Far-field measurements"] },
+      { name: "Smart antennas", children: ["Beamforming","Beam steering","Null steering"] }
+    ]
+  },
+  {
+    name: "Biomedical engineering",
+    children: [
+      { name: "Medical imaging", children: ["MRI","CT scanning","Ultrasound imaging","X-ray imaging","PET","SPECT","Optical coherence tomography"] },
+      { name: "Biomedical signal processing", children: ["ECG","EEG","EMG","Brain-computer interfaces"] },
+      { name: "Prosthetics and implants", children: ["Neural prosthetics","Cochlear implants","Retinal prosthetics","Cardiac pacemakers"] },
+      { name: "Drug delivery systems", children: ["Nanoparticle drug delivery","Controlled release","Targeted therapy"] },
+      { name: "Bioinformatics", children: ["Genomic signal processing","Protein structure prediction","Gene expression analysis","Sequence alignment"] },
+      { name: "Telemedicine", children: ["Remote patient monitoring","Mobile health","Electronic health records"] }
+    ]
+  },
+  {
+    name: "Circuits and systems",
+    children: [
+      { name: "Analog circuits", children: ["Operational amplifiers","Filters (analog)","Oscillators","Comparators","Data converters"] },
+      { name: "Digital circuits", children: ["Logic gates","Flip-flops","Adders","Multiplexers","Memory circuits"] },
+      { name: "Mixed-signal circuits", children: ["ADC","DAC","Sample-and-hold","Phase-locked loops"] },
+      { name: "RF circuits", children: ["Low-noise amplifiers","Power amplifiers","Mixers","Filters (RF)","Switches"] },
+      { name: "Power electronics", children: ["DC-DC converters","Inverters","Rectifiers","Motor drives","Power factor correction"] },
+      { name: "Integrated circuits", children: ["CMOS","VLSI","System-on-chip","Application-specific ICs","Microprocessors"] }
+    ]
+  },
+  {
+    name: "Communication technology",
+    children: [
+      { name: "Wireless communication", children: ["5G","LTE","Wi-Fi","Bluetooth","Satellite communication","OFDM","CDMA","MIMO"] },
+      { name: "Optical communication", children: ["Fiber optics","Optical networks","WDM","Coherent communication","Free-space optical"] },
+      { name: "Network protocols", children: ["TCP/IP","HTTP","MAC protocols","Routing protocols","Transport protocols"] },
+      { name: "Channel coding", children: ["Turbo codes","LDPC codes","Polar codes","Convolutional codes","Reed-Solomon"] },
+      { name: "Modulation", children: ["QAM","PSK","FSK","OFDM modulation","Spread spectrum"] },
+      { name: "Antennas and propagation", children: ["Multipath propagation","Fading channels","Channel models","Path loss"] },
+      { name: "Satellite communication", children: ["Geostationary satellites","Low-Earth orbit","Direct broadcast","GPS"] }
+    ]
+  },
+  {
+    name: "Components",
+    children: [
+      { name: "Sensors", children: ["Temperature sensors","Pressure sensors","Accelerometers","Gyroscopes","Chemical sensors","Optical sensors","Biosensors"] },
+      { name: "Actuators", children: ["Piezoelectric actuators","Electromagnetic actuators","Hydraulic actuators","Pneumatic actuators"] },
+      { name: "Passive components", children: ["Resistors","Capacitors","Inductors","Transformers","Filters"] },
+      { name: "Semiconductor devices", children: ["MOSFETs","BJTs","Diodes","IGBTs","Thyristors"] },
+      { name: "MEMS", children: ["Microactuators","Microsensors","Microfluidics","Nanofabrication"] }
+    ]
+  },
+  {
+    name: "Computing and processing",
+    children: [
+      { name: "Computer architecture", children: ["Parallel processing","Cache memory","Pipelining","Out-of-order execution","Memory hierarchy"] },
+      { name: "Operating systems", children: ["Real-time systems","Embedded operating systems","Distributed operating systems","File systems","Scheduling algorithms"] },
+      { name: "Parallel computing", children: ["GPU computing","Multicore processors","Cluster computing","Grid computing","MPI","OpenMP"] },
+      { name: "Cloud computing", children: ["Virtualization","Containerization","Serverless computing","Edge computing","Fog computing"] },
+      { name: "Quantum computing", children: ["Qubits","Quantum gates","Quantum algorithms","Quantum error correction","Quantum cryptography"] },
+      { name: "Embedded systems", children: ["Microcontrollers","FPGAs","DSP processors","Real-time control","Firmware"] }
+    ]
+  },
+  {
+    name: "Control systems",
+    children: [
+      { name: "Classical control", children: ["PID control","Root locus","Bode analysis","Nyquist criterion","Frequency response"] },
+      { name: "Modern control", children: ["State-space methods","Optimal control","Robust control","Adaptive control","H-infinity control"] },
+      { name: "Nonlinear control", children: ["Sliding mode control","Backstepping","Feedback linearization","Lyapunov methods"] },
+      { name: "Intelligent control", children: ["Fuzzy control","Neural control","Reinforcement learning control","Genetic algorithms"] },
+      { name: "Process control", children: ["Chemical process control","Manufacturing control","Temperature control","Flow control"] },
+      { name: "Motion control", children: ["Servo systems","Position control","Velocity control","Torque control","Robotics control"] }
+    ]
+  },
+  {
+    name: "Electromagnetism",
+    children: [
+      { name: "Electromagnetic compatibility", children: ["EMI","Shielding","Grounding","Filtering","ESD protection"] },
+      { name: "Electromagnetic wave propagation", children: ["Waveguides","Microwave propagation","Optical propagation","Plasma waves"] },
+      { name: "Magnetism", children: ["Ferromagnetism","Paramagnetism","Magnetic materials","Magnetic fields","Hysteresis"] },
+      { name: "Computational electromagnetics", children: ["Finite element methods","FDTD","Method of moments","Ray tracing"] }
+    ]
+  },
+  {
+    name: "Electronics",
+    children: [
+      { name: "Electronic packaging", children: ["PCB design","Surface mount technology","Thermal management","Solder joints"] },
+      { name: "Printed electronics", children: ["Flexible electronics","Organic electronics","3D printing electronics"] },
+      { name: "Display technology", children: ["LCD","OLED","LED displays","E-ink","MicroLED"] },
+      { name: "Electronic design automation", children: ["Logic synthesis","Place and route","Design verification","SPICE simulation"] }
+    ]
+  },
+  {
+    name: "Energy",
+    children: [
+      { name: "Renewable energy", children: ["Solar energy","Wind energy","Hydropower","Geothermal","Tidal energy","Biomass energy"] },
+      { name: "Energy storage", children: ["Batteries","Supercapacitors","Fuel cells","Pumped hydro","Flywheel storage"] },
+      { name: "Smart grid", children: ["Demand response","Energy management systems","Metering infrastructure","Grid stability","Microgrids"] },
+      { name: "Power generation", children: ["Nuclear power","Thermal power","Combined heat and power","Gas turbines"] },
+      { name: "Power transmission", children: ["High-voltage DC","High-voltage AC","Power lines","Substations","Transformers"] }
+    ]
+  },
+  {
+    name: "Environmental engineering",
+    children: [
+      { name: "Air pollution", children: ["Emissions monitoring","Air quality sensors","Atmospheric modeling","Particulate matter"] },
+      { name: "Water treatment", children: ["Wastewater treatment","Desalination","Water quality monitoring","Filtration systems"] },
+      { name: "Climate modeling", children: ["Atmospheric simulation","Ocean modeling","Sea level prediction","Carbon modeling"] },
+      { name: "Remote sensing (environment)", children: ["Satellite imagery","LIDAR","Hyperspectral imaging","Land cover classification"] }
+    ]
+  },
+  {
+    name: "Geoscience",
+    children: [
+      { name: "Remote sensing", children: ["SAR imagery","Multispectral imaging","Change detection","Image classification","Vegetation indices"] },
+      { name: "Geophysical signal processing", children: ["Seismic signal processing","Geomagnetic measurements","Gravity surveys"] },
+      { name: "GPS and navigation", children: ["GNSS","Differential GPS","Inertial navigation","Positioning systems"] },
+      { name: "Ocean sensing", children: ["Acoustic oceanography","Tidal sensing","Ocean temperature profiling"] }
+    ]
+  },
+  {
+    name: "Information science",
+    children: [
+      { name: "Data management", children: ["Databases","Data warehousing","Big data","NoSQL","Data mining","Knowledge graphs"] },
+      { name: "Information retrieval", children: ["Search engines","Indexing","Ranking algorithms","Question answering"] },
+      { name: "Information security", children: ["Cryptography","Authentication","Access control","Intrusion detection","Firewalls"] },
+      { name: "Digital libraries", children: ["Metadata","Archival systems","Digital preservation","Content management"] },
+      { name: "Human information interaction", children: ["Information visualization","User modeling","Recommender systems","Collaborative filtering"] }
+    ]
+  },
+  {
+    name: "Machine learning and AI",
+    children: [
+      { name: "Deep learning", children: ["Convolutional neural networks","Recurrent neural networks","Transformers","Generative adversarial networks","Autoencoders","Attention mechanisms"] },
+      { name: "Classical machine learning", children: ["Support vector machines","Decision trees","Random forests","Naive Bayes","K-nearest neighbors"] },
+      { name: "Reinforcement learning", children: ["Q-learning","Policy gradient","Actor-critic","Multi-agent RL","Model-based RL"] },
+      { name: "Natural language processing", children: ["Text classification","Named entity recognition","Machine translation","Sentiment analysis","Large language models"] },
+      { name: "Computer vision", children: ["Object detection","Image segmentation","Face recognition","Optical flow","3D reconstruction"] },
+      { name: "Probabilistic methods", children: ["Bayesian networks","Hidden Markov models","Gaussian processes","Monte Carlo methods"] },
+      { name: "Federated learning", children: ["Privacy-preserving ML","Distributed training","Differential privacy"] }
+    ]
+  },
+  {
+    name: "Manufacturing",
+    children: [
+      { name: "Additive manufacturing", children: ["3D printing","Selective laser sintering","Fused deposition modeling","Stereolithography","Metal additive manufacturing"] },
+      { name: "Robotics in manufacturing", children: ["Industrial robots","Collaborative robots","Welding robots","Assembly robots"] },
+      { name: "Quality control", children: ["Statistical process control","Non-destructive testing","Automated inspection","Six sigma"] },
+      { name: "Computer-aided manufacturing", children: ["CAD/CAM","CNC machining","Digital twins","Process simulation"] },
+      { name: "Supply chain management", children: ["Logistics optimization","Inventory management","Demand forecasting","IoT in supply chain"] }
+    ]
+  },
+  {
+    name: "Materials science",
+    children: [
+      { name: "Semiconductors", children: ["Silicon","Compound semiconductors","Wide bandgap semiconductors","Organic semiconductors","2D materials"] },
+      { name: "Nanomaterials", children: ["Carbon nanotubes","Graphene","Quantum dots","Nanoparticles","Nanocomposites"] },
+      { name: "Dielectric materials", children: ["High-k dielectrics","Ferroelectrics","Piezoelectrics","Polymers (dielectric)"] },
+      { name: "Magnetic materials", children: ["Hard magnetic materials","Soft magnetic materials","Spintronics","Magneto-optical"] },
+      { name: "Superconductors", children: ["High-temperature superconductors","Josephson junctions","SQUID devices"] }
+    ]
+  },
+  {
+    name: "Mathematics",
+    children: [
+      { name: "Signal processing theory", children: ["Fourier analysis","Wavelet transforms","Sparse representation","Compressed sensing"] },
+      { name: "Linear algebra", children: ["Matrix decomposition","Eigenvalues","Singular value decomposition","Tensor methods"] },
+      { name: "Optimization", children: ["Convex optimization","Integer programming","Genetic algorithms","Gradient descent","Stochastic optimization"] },
+      { name: "Graph theory", children: ["Network topology","Spectral graph theory","Community detection","Random graphs"] },
+      { name: "Statistical methods", children: ["Hypothesis testing","Regression","Estimation theory","Bayesian inference","Time series analysis"] },
+      { name: "Numerical methods", children: ["Finite element analysis","Monte Carlo simulation","Differential equations","Interpolation"] }
+    ]
+  },
+  {
+    name: "Medical devices",
+    children: [
+      { name: "Diagnostic equipment", children: ["Electrocardiography","Blood pressure monitors","Blood glucose meters","Pulse oximeters"] },
+      { name: "Therapeutic equipment", children: ["Radiation therapy","Ultrasound therapy","Electrical stimulation","Laser therapy"] },
+      { name: "Surgical robots", children: ["Laparoscopic robots","Endoscopic systems","Microsurgery robots"] },
+      { name: "Wearable health devices", children: ["Smartwatches","Activity monitors","Biosensing wearables","Implantable sensors"] }
+    ]
+  },
+  {
+    name: "Microelectronics",
+    children: [
+      { name: "Semiconductor fabrication", children: ["Photolithography","Etching","Ion implantation","Chemical vapor deposition","Sputtering"] },
+      { name: "Transistors", children: ["FinFET","MOSFET scaling","Gate-all-around transistors","Thin-film transistors"] },
+      { name: "Memory devices", children: ["DRAM","SRAM","Flash memory","MRAM","Phase-change memory","ReRAM"] },
+      { name: "Packaging (microelectronics)", children: ["Flip chip","3D IC","Through-silicon via","Wafer-level packaging"] }
+    ]
+  },
+  {
+    name: "Network security",
+    children: [
+      { name: "Cryptographic protocols", children: ["Public key infrastructure","TLS/SSL","Elliptic curve cryptography","Post-quantum cryptography"] },
+      { name: "Malware and threats", children: ["Ransomware","Botnets","Phishing","Zero-day exploits","APTs"] },
+      { name: "Security architectures", children: ["Zero trust","Defense in depth","Security by design","Identity management"] },
+      { name: "Intrusion detection", children: ["Anomaly detection","Signature-based detection","Machine learning security","Honeypots"] },
+      { name: "Blockchain", children: ["Distributed ledger","Smart contracts","Consensus mechanisms","Cryptocurrency"] }
+    ]
+  },
+  {
+    name: "Networking",
+    children: [
+      { name: "Internet of Things", children: ["IoT protocols","Edge devices","IoT security","Smart home","Industrial IoT","Fog computing"] },
+      { name: "Software-defined networking", children: ["OpenFlow","Network functions virtualization","Network orchestration"] },
+      { name: "Mobile networks", children: ["5G networks","LTE-Advanced","Network slicing","C-RAN","D2D communication"] },
+      { name: "Network management", children: ["Quality of service","Traffic engineering","Network monitoring","Network automation"] },
+      { name: "Vehicular networks", children: ["V2X communication","VANET","Connected vehicles","Platooning"] }
+    ]
+  },
+  {
+    name: "Photonics",
+    children: [
+      { name: "Lasers", children: ["Semiconductor lasers","Fiber lasers","Solid-state lasers","Ultrafast lasers","Quantum cascade lasers"] },
+      { name: "Optical fiber", children: ["Single-mode fiber","Multimode fiber","Photonic crystal fiber","Fiber Bragg gratings"] },
+      { name: "Optical devices", children: ["Optical modulators","Photodetectors","Optical switches","Waveguides","Beam splitters"] },
+      { name: "Quantum optics", children: ["Entanglement","Quantum key distribution","Photon statistics","Single-photon sources"] },
+      { name: "Imaging systems", children: ["Microscopy","Telescope systems","Interferometry","Spectroscopy"] }
+    ]
+  },
+  {
+    name: "Physics",
+    children: [
+      { name: "Quantum mechanics", children: ["Wave-particle duality","Schrödinger equation","Quantum entanglement","Quantum tunneling"] },
+      { name: "Plasma physics", children: ["Plasma diagnostics","Fusion energy","Magnetohydrodynamics","Plasma waves"] },
+      { name: "Condensed matter physics", children: ["Solid-state physics","Topological insulators","Superconductivity","2D materials physics"] },
+      { name: "Acoustics", children: ["Acoustic waves","Noise control","Ultrasound","Acoustic metamaterials","Room acoustics"] }
+    ]
+  },
+  {
+    name: "Power systems",
+    children: [
+      { name: "Power quality", children: ["Harmonics","Voltage flicker","Power factor","Power conditioning"] },
+      { name: "Electric machines", children: ["Induction motors","Synchronous machines","Permanent magnet motors","Switched reluctance machines"] },
+      { name: "Renewable integration", children: ["Wind power integration","Solar grid integration","Energy storage systems","Grid stability"] },
+      { name: "Protection systems", children: ["Relay protection","Circuit breakers","Fault detection","Surge protection"] }
+    ]
+  },
+  {
+    name: "Robotics",
+    children: [
+      { name: "Robot perception", children: ["Computer vision (robotics)","LIDAR sensing","Tactile sensing","Depth cameras","Point clouds"] },
+      { name: "Robot motion planning", children: ["Path planning","Motion planning algorithms","Collision avoidance","SLAM"] },
+      { name: "Robot learning", children: ["Imitation learning","Sim-to-real transfer","Task and motion planning","Manipulation learning"] },
+      { name: "Autonomous vehicles", children: ["Self-driving cars","Unmanned ground vehicles","Autonomous underwater vehicles","Drone autonomy"] },
+      { name: "Human-robot interaction", children: ["Social robotics","Teleoperation","Shared autonomy","Robot ethics"] }
+    ]
+  },
+  {
+    name: "Signal processing",
+    children: [
+      { name: "Audio and speech processing", children: ["Speech recognition","Speaker identification","Audio coding","Noise cancellation","Music processing"] },
+      { name: "Image processing", children: ["Image enhancement","Edge detection","Morphological processing","Image compression","Super resolution"] },
+      { name: "Video processing", children: ["Video compression","Video coding (HEVC, AV1)","Optical flow","Video analysis","Video surveillance"] },
+      { name: "Array signal processing", children: ["Beamforming","Direction of arrival estimation","Spatial filtering","MUSIC algorithm"] },
+      { name: "Statistical signal processing", children: ["Kalman filtering","Particle filters","Adaptive filtering","Spectral estimation"] }
+    ]
+  },
+  {
+    name: "Software engineering",
+    children: [
+      { name: "Software design", children: ["Design patterns","Software architecture","Microservices","UML","API design"] },
+      { name: "Software testing", children: ["Unit testing","Integration testing","Regression testing","Fuzzing","Formal verification"] },
+      { name: "DevOps", children: ["Continuous integration","Continuous delivery","Infrastructure as code","Monitoring","Containerization"] },
+      { name: "Human-computer interaction", children: ["User experience","Usability testing","Accessibility","Interface design","Cognitive ergonomics"] },
+      { name: "Programming languages", children: ["Compilers","Type systems","Functional programming","Concurrent programming","Domain-specific languages"] }
+    ]
+  },
+  {
+    name: "Transportation",
+    children: [
+      { name: "Intelligent transportation systems", children: ["Traffic management","Connected vehicles","Traffic simulation","Smart intersections"] },
+      { name: "Electric vehicles", children: ["Battery electric vehicles","Hybrid vehicles","Charging infrastructure","Motor control (EV)"] },
+      { name: "Rail systems", children: ["High-speed rail","Maglev","Train control systems","Rail electrification"] },
+      { name: "Air traffic control", children: ["Radar surveillance","Collision avoidance","Flight management systems"] }
+    ]
+  }
+];
+
+// --- Build Tree ---
+let allNodes = [];
+let searchQuery = '';
+
+function countLeaves(node) {
+  if (!node.children || node.children.length === 0) return 1;
+  return node.children.reduce((acc, c) => acc + (typeof c === 'string' ? 1 : countLeaves(c)), 0);
+}
+
+function countAll(node) {
+  if (typeof node === 'string') return 1;
+  let count = 1;
+  if (node.children) {
+    for (const c of node.children) count += countAll(c);
+  }
+  return count;
+}
+
+function buildNode(data, level, parentOpen) {
+  const nodeId = `n_${allNodes.length}`;
+  const isLeaf = typeof data === 'string';
+  const name = isLeaf ? data : data.name;
+  const children = isLeaf ? [] : (data.children || []);
+  const hasChildren = children.length > 0;
+
+  const obj = { id: nodeId, name, level, hasChildren, open: false, el: null };
+  allNodes.push(obj);
+
+  const nodeEl = document.createElement('div');
+  nodeEl.className = 'tree-node';
+  nodeEl.id = nodeId;
+
+  const rowEl = document.createElement('div');
+  rowEl.className = 'node-row';
+
+  // Indent
+  for (let i = 0; i < level; i++) {
+    const line = document.createElement('div');
+    line.className = 'indent-line';
+    rowEl.appendChild(line);
+  }
+
+  // Toggle
+  const toggle = document.createElement('div');
+  toggle.className = 'node-toggle' + (hasChildren ? ' has-children' : '');
+  if (hasChildren) toggle.textContent = '−';
+  else toggle.textContent = '';
+  rowEl.appendChild(toggle);
+
+  // Label
+  const label = document.createElement('div');
+  label.className = `node-label l${Math.min(level, 3)}`;
+  label.setAttribute('data-name', name);
+  label.textContent = name;
+  rowEl.appendChild(label);
+
+  // Tag for l0 and l1
+  if (level === 0) {
+    const tag = document.createElement('span');
+    tag.className = 'node-tag l0-tag';
+    tag.textContent = `${children.length} topics`;
+    rowEl.appendChild(tag);
+  } else if (level === 1 && hasChildren) {
+    const tag = document.createElement('span');
+    tag.className = 'node-tag l1-tag';
+    tag.textContent = `${children.length}`;
+    rowEl.appendChild(tag);
+  }
+
+  nodeEl.appendChild(rowEl);
+  obj.el = nodeEl;
+  obj.rowEl = rowEl;
+  obj.toggleEl = toggle;
+  obj.labelEl = label;
+
+  // Children
+  if (hasChildren) {
+    const childrenEl = document.createElement('div');
+    childrenEl.className = 'node-children collapsed';
+    if (level > 0) obj.open = false;
+
+    for (const child of children) {
+      const childNode = buildNode(child, level + 1, obj.open);
+      childrenEl.appendChild(childNode.el);
+    }
+    nodeEl.appendChild(childrenEl);
+    obj.childrenEl = childrenEl;
+
+    rowEl.addEventListener('click', () => toggleNode(obj));
+    toggle.textContent = hasChildren ? '+' : '';
+  }
+
+  return obj;
+}
+
+function toggleNode(obj) {
+  if (!obj.hasChildren) return;
+  obj.open = !obj.open;
+  obj.childrenEl.classList.toggle('collapsed', !obj.open);
+  obj.toggleEl.textContent = obj.open ? '-' : '+';
+  obj.toggleEl.classList.toggle('open', obj.open);
+}
+
+function expandAll() {
+  allNodes.forEach(n => {
+    if (n.hasChildren) {
+      n.open = true;
+      n.childrenEl.classList.remove('collapsed');
+      n.toggleEl.textContent = '-';
+      n.toggleEl.classList.add('open');
+    }
+  });
+}
+
+function collapseAll() {
+  allNodes.forEach(n => {
+    if (n.hasChildren) {
+      n.open = false;
+      n.childrenEl.classList.add('collapsed');
+      n.toggleEl.textContent = '+';
+      n.toggleEl.classList.remove('open');
+    }
+  });
+}
+
+// --- Search ---
+function doSearch(query) {
+  searchQuery = query.trim().toLowerCase();
+  const countEl = document.getElementById('searchCount');
+  const noResult = document.getElementById('noResult');
+
+  if (!searchQuery) {
+    // Reset
+    allNodes.forEach(n => {
+      n.el.style.display = '';
+      n.labelEl.textContent = n.name;
+      // collapse back to default
+      if (n.hasChildren) {
+        if (n.level === 0) {
+          n.open = true;
+          n.childrenEl.classList.remove('collapsed');
+          n.toggleEl.textContent = '−';
+        } else {
+          n.open = false;
+          n.childrenEl.classList.add('collapsed');
+          n.toggleEl.textContent = '+';
+        }
+        n.toggleEl.classList.toggle('open', n.open);
+      }
+    });
+    countEl.textContent = '';
+    noResult.classList.remove('visible');
+    return;
+  }
+
+  // Find matching leaf names
+  let matchCount = 0;
+  const matchSet = new Set();
+
+  // Mark matches bottom-up
+  allNodes.forEach(n => {
+    if (n.name.toLowerCase().includes(searchQuery)) {
+      matchSet.add(n.id);
+      // mark all ancestors
+      markAncestors(n.id);
+    }
+  });
+
+  function markAncestors(nodeId) {
+    const node = allNodes.find(x => x.id === nodeId);
+    if (!node) return;
+    // find parent by checking DOM
+    const parentNode = node.el.parentElement?.closest('.tree-node');
+    if (!parentNode) return;
+    matchSet.add(parentNode.id);
+    markAncestors(parentNode.id);
+  }
+
+  // Apply visibility
+  allNodes.forEach(n => {
+    const matched = matchSet.has(n.id);
+    n.el.style.display = matched ? '' : 'none';
+
+    // Highlight label
+    if (matched && n.name.toLowerCase().includes(searchQuery)) {
+      const idx = n.name.toLowerCase().indexOf(searchQuery);
+      const before = n.name.slice(0, idx);
+      const match = n.name.slice(idx, idx + searchQuery.length);
+      const after = n.name.slice(idx + searchQuery.length);
+      n.labelEl.innerHTML = `${escHtml(before)}<mark>${escHtml(match)}</mark>${escHtml(after)}`;
+      matchCount++;
+    } else {
+      n.labelEl.textContent = n.name;
+    }
+
+    // Expand if in match set
+    if (matched && n.hasChildren) {
+      n.open = true;
+      n.childrenEl.classList.remove('collapsed');
+      n.toggleEl.textContent = '−';
+      n.toggleEl.classList.add('open');
+    }
+  });
+
+  countEl.textContent = matchCount > 0 ? `${matchCount} match${matchCount !== 1 ? 'es' : ''}` : '';
+  noResult.classList.toggle('visible', matchCount === 0);
+}
+
+function escHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+// --- Init ---
+const root = document.getElementById('treeRoot');
+TAXONOMY.forEach(item => {
+  const node = buildNode(item, 0, true);
+  root.appendChild(node.el);
+});
+
+let searchTimer;
+document.getElementById('searchInput').addEventListener('input', e => {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => doSearch(e.target.value), 180);
+});
+</script>
+</body>
+</html>
