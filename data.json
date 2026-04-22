@@ -1,7 +1,7 @@
 [
-{
-  "name_FR": "Criminalité numérique",
-  "name_DE": "Digitale Kriminalität",
+  {
+    "name_FR": "Criminalité numérique",
+    "name_DE": "Digitale Kriminalität",
     "values": [
       {
         "date": 2021,
@@ -24,1114 +24,1143 @@
         "value": 57761
       }
     ],
-  "definition_de": "Die digitale Kriminalität (Cyberkriminalität) umfasst alle sogenannten 'digitalen' Straftaten, die im Wesentlichen den Straftaten entsprechen, die in Telekommunikationsnetzen, insbesondere im Internet, begangen werden. Die Identifizierung einer Straftat als Cyberdelikt erfolgt in der Polizeilichen Kriminalstatistik über den Modus Operandi.",
-  "definition_fr": "La criminalité numérique (cybercriminalité) représente l’ensemble des infractions dites 'numériques' correspondant essentiellement aux infractions pénales commises sur les réseaux de télécommunication, en particulier Internet. L'identification d'une infraction propre à la cybercriminalité se fait via le modus operandi dans la statistique policière de la criminalité.",
-  "children": [
-    {
-      "name_FR": "Cybercriminalité économique",
-      "name_DE": "Cyber Wirtschaftskriminalität",
-      "definition_de": "siehe Unterkategorien",
-      "definition_fr": "voir sous-catégories",
-    "values": [
+    "definition_de": "Die digitale Kriminalität (Cyberkriminalität) umfasst alle sogenannten 'digitalen' Straftaten, die im Wesentlichen den Straftaten entsprechen, die in Telekommunikationsnetzen, insbesondere im Internet, begangen werden. Die Identifizierung einer Straftat als Cyberdelikt erfolgt in der Polizeilichen Kriminalstatistik über den Modus Operandi.",
+    "definition_fr": "La criminalité numérique (cybercriminalité) représente l’ensemble des infractions dites 'numériques' correspondant essentiellement aux infractions pénales commises sur les réseaux de télécommunication, en particulier Internet. L'identification d'une infraction propre à la cybercriminalité se fait via le modus operandi dans la statistique policière de la criminalité.",
+    "children": [
       {
-        "date": 2021,
-        "value": 26671
+        "name_FR": "Cybercriminalité économique",
+        "name_DE": "Cyber Wirtschaftskriminalität",
+        "definition_de": "siehe Unterkategorien",
+        "definition_fr": "voir sous-catégories",
+        "values": [
+          {
+            "date": 2021,
+            "value": 26671
+          },
+          {
+            "date": 2022,
+            "value": 29677
+          },
+          {
+            "date": 2023,
+            "value": 40496
+          },
+          {
+            "date": 2024,
+            "value": 55413
+          },
+          {
+            "date": 2025,
+            "value": 54247
+          }
+        ],
+        "children": [
+          {
+            "name_FR": "Phishing",
+            "name_DE": "Phishing",
+            "definition_de": "Erhältlich machen von persönlichen und/oder vertraulichen Daten in unbefugter Weise.",
+            "definition_fr": "Rendre accessibles des données personnelles ou confidentielles de manière illicite.",
+            "values": [
+              {
+                "date": 2021,
+                "value": 1210
+              },
+              {
+                "date": 2022,
+                "value": 2236
+              },
+              {
+                "date": 2023,
+                "value": 3796
+              },
+              {
+                "date": 2024,
+                "value": 5930
+              },
+              {
+                "date": 2025,
+                "value": 7409
+              }
+            ]
+          },
+          {
+            "name_FR": "Hacking",
+            "name_DE": "Hacking",
+            "definition_de": "siehe Unterkategorien",
+            "definition_fr": "voir sous-catégories",
+            "values": [
+              {
+                "date": 2021,
+                "value": 977
+              },
+              {
+                "date": 2022,
+                "value": 1042
+              },
+              {
+                "date": 2023,
+                "value": 1093
+              },
+              {
+                "date": 2024,
+                "value": 1350
+              },
+              {
+                "date": 2025,
+                "value": 1323
+              }
+            ],
+            "children": [
+              {
+                "name_FR": "Pénétrer un système informatique de force",
+                "name_DE": "Gewaltsames Eindringen in Datenverarbeitungssystem",
+                "definition_de": "Gewaltsames Eindringen in ein Datenverarbeitungssystem, um Personendaten zu entwenden oder die Inhalte zu betrügerischen oder politisch-religiösen Zwecken zu verändern (Hacktivismus).",
+                "definition_fr": "Hacker un site web dans le but de voler les données de la personne enregistrée ou inscrites sur les serveurs du site web ou d'en modifier le contenu pour des raisons politico-religieuses (hacktivisme).",
+                "values": [
+                  {
+                    "date": 2021,
+                    "value": 324
+                  },
+                  {
+                    "date": 2022,
+                    "value": 246
+                  },
+                  {
+                    "date": 2023,
+                    "value": 214
+                  },
+                  {
+                    "date": 2024,
+                    "value": 186
+                  },
+                  {
+                    "date": 2025,
+                    "value": 199
+                  }
+                ]
+              },
+              {
+                "name_FR": "Accéder sans un système informatique au moyen de codes d'accès externes",
+                "name_DE": "Eindringen in Datenverarbeitungssystem mit fremden Zugangsdaten",
+                "definition_de": "Eindringen in ein Datenverarbeitungssystem mit fremden Zugangsdaten, um Personendaten zu entwenden oder die Inhalte zu betrügerischen oder politisch-religiösen Zwecken zu verändern (Hacktivismus).",
+                "definition_fr": "Accéder indument dans un système informatique au moyen de données d'accès externes, dans le but de soutirer des données personnelles, ou d’en modifier le contenu à des fins frauduleuses ou politico-religieuses (hacktivisme).",
+                "values": [
+                  {
+                    "date": 2021,
+                    "value": 653
+                  },
+                  {
+                    "date": 2022,
+                    "value": 796
+                  },
+                  {
+                    "date": 2023,
+                    "value": 879
+                  },
+                  {
+                    "date": 2024,
+                    "value": 1164
+                  },
+                  {
+                    "date": 2025,
+                    "value": 1124
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name_FR": "Malware",
+            "name_DE": "Malware",
+            "values": [
+              {
+                "date": 2021,
+                "value": 521
+              },
+              {
+                "date": 2022,
+                "value": 433
+              },
+              {
+                "date": 2023,
+                "value": 476
+              },
+              {
+                "date": 2024,
+                "value": 361
+              },
+              {
+                "date": 2025,
+                "value": 327
+              }
+            ],
+            "definition_de": "siehe Unterkategorien",
+            "definition_fr": "voir sous-catégories",
+            "children": [
+              {
+                "name_FR": "Ransomware",
+                "name_DE": "Ransomware",
+                "definition_de": "Informatiksystem sperren/verschlüsseln und Geldforderung als Freikauf für die Entschlüsselung stellen. Ransomware ist eine Schadsoftware, die – einmal aktiviert – die Computer- oder Smartphonedaten des Opfers verschlüsselt und eine Geldforderung für die Entschlüsselung stellt. In einer Variante davon wird der Computer oder das Smartphone (manchmal einzig der Browser) infiziert und gesperrt. Sodann erscheint eine vermeintlich behördliche Mitteilung, welche die betroffene Person zu einer Bussenzahlung mittels digitaler Währung bzw. elektronischer Zahlungsmittel auffordert, damit das Informatiksystem wieder entsperrt wird.",
+                "definition_fr": "Bloquer/Chiffrer un système informatique et demander une rançon. Un Ransomware est un logiciel malveillant qui, une fois activé, chiffre les données de l’ordinateur ou du smartphone de la victime et requiert une somme d’argent pour les déverrouiller. Une autre version infecte et bloque l'ordinateur ou le smartphone (parfois aussi seulement le navigateur). Il envoie alors une notification apparemment officielle exigeant de la victime le paiement d'une amende en monnaie virtuelle, respectivement par le biais d’un moyen de paiement électronique, pour débloquer le système informatique.",
+                "values": [
+                  {
+                    "date": 2021,
+                    "value": 340
+                  },
+                  {
+                    "date": 2022,
+                    "value": 307
+                  },
+                  {
+                    "date": 2023,
+                    "value": 252
+                  },
+                  {
+                    "date": 2024,
+                    "value": 174
+                  },
+                  {
+                    "date": 2025,
+                    "value": 229
+                  }
+                ]
+              },
+              {
+                "name_FR": "Cheval de Troie e-banking",
+                "name_DE": "E-Banking Trojaner",
+                "definition_de": "Übernehmen / Steuern einer Sitzung. Infektion des Datenverarbeitungssystems mit Schadsoftware, die es ermöglicht, E-Banking-Sitzungen zu übernehmen und unbemerkt Geld-Transaktionen auf in- und ausländische Konten auszulösen. Infektion von Smartphones mit zusätzlicher Schadsoftware, um Nachrichten von Authentifizierungs- mechanismen abzufangen.",
+                "definition_fr": "Prise en main d'une session. Infection du système de traitement des données à l'aide d'un logiciel malveillant (dit malware ou maliciel) qui permet d'ouvrir des sessions d'e-banking et de générer, de manière inaperçue, des transferts d'argent sur des comptes en Suisse et à l'étranger ; infection de smartphones via un malware supplémentaire qui intercepte les messages envoyés par les mécanismes d'authentification.",
+                "values": [
+                  {
+                    "date": 2021,
+                    "value": 82
+                  },
+                  {
+                    "date": 2022,
+                    "value": 49
+                  },
+                  {
+                    "date": 2023,
+                    "value": 38
+                  },
+                  {
+                    "date": 2024,
+                    "value": 49
+                  },
+                  {
+                    "date": 2025,
+                    "value": 21
+                  }
+                ]
+              },
+              {
+                "name_FR": "Spyware",
+                "name_DE": "Spyware",
+                "definition_de": "Infizierung eines Informatiksystems (wie Computer, Smartphone) mit einer Schadsoft-ware, die die Aktivitäten der Nutzerin oder des Nutzers ausspioniert (z. B. besuchte Webseiten) und die Daten via Internetverbindung an die Täterschaft übermittelt.",
+                "definition_fr": "Infection d'un système informatique (ordinateur, smartphone, etc.) par un logiciel malveillant permettant d’espionner les activités (p. ex. sites web consultés) de l’utilisateur et transmettre les données ainsi obtenues à l’auteur via une connexion Internet.",
+                "values": [
+                  {
+                    "date": 2021,
+                    "value": 25
+                  },
+                  {
+                    "date": 2022,
+                    "value": 15
+                  },
+                  {
+                    "date": 2023,
+                    "value": 13
+                  },
+                  {
+                    "date": 2024,
+                    "value": 19
+                  },
+                  {
+                    "date": 2025,
+                    "value": 10
+                  }
+                ]
+              },
+              {
+                "name_FR": "Rogueware & Scareware",
+                "name_DE": "Rogueware & Scareware",
+                "definition_de": "Auf dem Bildschirm des Computers (oder eines anderen Informatiksystems) erscheint die Mitteilung, der Computer sei infiziert und man müsse ein Programm installieren, um die Situation zu kontrollieren.",
+                "definition_fr": "Un message s'affiche sur l'ordinateur (ou un autre système informatique) qui alarme la victime que son ordinateur est infecté et qu'il s'agit d'installer un programme pour remédier à cette situation.",
+                "values": [
+                  {
+                    "date": 2021,
+                    "value": 61
+                  },
+                  {
+                    "date": 2022,
+                    "value": 45
+                  },
+                  {
+                    "date": 2023,
+                    "value": 163
+                  },
+                  {
+                    "date": 2024,
+                    "value": 110
+                  },
+                  {
+                    "date": 2025,
+                    "value": 58
+                  }
+                ]
+              },
+              {
+                "name_FR": "Botnet",
+                "name_DE": "Botnet",
+                "definition_de": "Botnet ist die Bezeichnung für eine Gruppe von Computern, die von einer oder mehreren Malware infiziert wurden. Ein solches Netz von befallenen Computern (auch Zombies oder Bots genannt) kann von Cyberkriminellen kontrolliert und aktiviert werden, um kriminelle Handlungen zu begehen.",
+                "definition_fr": "Le terme 'botnet' désigne un groupe d'ordinateurs qui ont été contaminés par un ou plusieurs malwares. Un tel réseau d'ordinateurs compromis (aussi appelés des 'zombies' ou 'bots'), contrôlé par les cybercriminels, peut être activé par ces derniers pour exécuter des actions malveillantes.",
+                "values": [
+                  {
+                    "date": 2021,
+                    "value": 13
+                  },
+                  {
+                    "date": 2022,
+                    "value": 17
+                  },
+                  {
+                    "date": 2023,
+                    "value": 10
+                  },
+                  {
+                    "date": 2024,
+                    "value": 9
+                  },
+                  {
+                    "date": 2025,
+                    "value": 9
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name_FR": "DDOS",
+            "name_DE": "DDOS",
+            "definition_de": "Angreifen der Verfügbarkeit eines Datenverarbeitungssystems durch Überlast. DDoS (Distributed Denial of Service) Angriffe werden gleichzeitig durch mehrere Rechner ausgeführt.",
+            "definition_fr": "Attaque visant à surcharger un système informatique pour le rendre indisponible. Les attaques DDoS (Distributed Denial of Service = déni de service) sont menées simultanément par plusieurs ordinateurs.",
+            "values": [
+              {
+                "date": 2021,
+                "value": 32
+              },
+              {
+                "date": 2022,
+                "value": 16
+              },
+              {
+                "date": 2023,
+                "value": 17
+              },
+              {
+                "date": 2024,
+                "value": 30
+              },
+              {
+                "date": 2025,
+                "value": 22
+              }
+            ]
+          },
+          {
+            "name_FR": "Cyber-escroquerie",
+            "name_DE": "Cyberbetrug",
+            "definition_de": "siehe Unterkategorien",
+            "definition_fr": "voir sous-catégories",
+            "values": [
+              {
+                "date": 2021,
+                "value": 20691
+              },
+              {
+                "date": 2022,
+                "value": 22207
+              },
+              {
+                "date": 2023,
+                "value": 30331
+              },
+              {
+                "date": 2024,
+                "value": 42505
+              },
+              {
+                "date": 2025,
+                "value": 39754
+              }
+            ],
+            "children": [
+              {
+                "name_FR": "CEO/BEC Fraud",
+                "name_DE": "CEO/BEC Betrug",
+                "definition_de": "Die Täter geben sich als Vertreter eines Unternehmen aus (behaupten, deren CEO, Mitarbeiter oder Anwalt zu sein) und veranlassen einen Geschäftspartner dieses Unternehmens oder eine dort angestellte Person, Geld auf ein ungewöhnliches Konto im Ausland zu überweisen.",
+                "definition_fr": "Se faire passer pour un représentant d'une entreprise (président, employé, avocat) et inciter un partenaire commercial de l'entreprise ou un employé à verser de l'argent sur un compte inhabituel à l'étranger.",
+                "values": [
+                  {
+                    "date": 2021,
+                    "value": 412
+                  },
+                  {
+                    "date": 2022,
+                    "value": 401
+                  },
+                  {
+                    "date": 2023,
+                    "value": 412
+                  },
+                  {
+                    "date": 2024,
+                    "value": 504
+                  },
+                  {
+                    "date": 2025,
+                    "value": 560
+                  }
+                ]
+              },
+              {
+                "name_FR": "Magasins en ligne frauduleux",
+                "name_DE": "Betrügerische Internetshops",
+                "definition_de": "Die Täter geben sich als Vertreter eines Unternehmen aus (behaupten, deren CEO, Mitarbeiter oder Anwalt zu sein) und veranlassen einen Geschäftspartner dieses Unternehmens oder eine dort angestellte Person, Geld auf ein ungewöhnliches Konto im Ausland zu überweisen.",
+                "definition_fr": "Un acheteur commande et paie des marchandises dans un magasin en ligne (frauduleux), mais ne les reçoit jamais, ou alors il reçoit des contrefaçons ou des marchandises défectueuses ou de valeur inférieure.",
+                "values": [
+                  {
+                    "date": 2021,
+                    "value": 632
+                  },
+                  {
+                    "date": 2022,
+                    "value": 543
+                  },
+                  {
+                    "date": 2023,
+                    "value": 678
+                  },
+                  {
+                    "date": 2024,
+                    "value": 890
+                  },
+                  {
+                    "date": 2025,
+                    "value": 902
+                  }
+                ]
+              },
+              {
+                "name_FR": "Fausses annonces immobilières",
+                "name_DE": "Falsche Immobilienanzeigen",
+                "definition_de": "Die Täterschaft publiziert eine falsche Immobilienanzeige auf einer Seite mit Immobilien- oder Kleinanzeigen und verlangt von den interessierten Personen, dass sie im Voraus eine Kaution bezahlen.",
+                "definition_fr": "Les auteurs publient une fausse annonce immobilière sur un site de petites annonces et demandent aux intéressés de verser à l'avance une caution.",
+                "values": [
+                  {
+                    "date": 2021,
+                    "value": 518
+                  },
+                  {
+                    "date": 2022,
+                    "value": 433
+                  },
+                  {
+                    "date": 2023,
+                    "value": 525
+                  },
+                  {
+                    "date": 2024,
+                    "value": 657
+                  },
+                  {
+                    "date": 2025,
+                    "value": 632
+                  }
+                ]
+              },
+              {
+                "name_FR": "Fausses requêtes d'aide",
+                "name_DE": "Falsche Untrestützungsanfragen",
+                "definition_de": "Betrug, bei dem die Täter von gehackten Konten (Email, Social Media, Chat, usw.), im Namen des Kontoinhabers, falsche Unterstützungsanfragen an dessen Kontakte senden (Anfragen finanzieller Natur).",
+                "definition_fr": "Escroquerie consistant à envoyer de fausses requêtes d'aide (financière) aux contacts des comptes piratés (e-mail, médias sociaux, chat, etc.) au nom du titulaire du compte.",
+                "values": [
+                  {
+                    "date": 2021,
+                    "value": 127
+                  },
+                  {
+                    "date": 2022,
+                    "value": 94
+                  },
+                  {
+                    "date": 2023,
+                    "value": 343
+                  },
+                  {
+                    "date": 2024,
+                    "value": 571
+                  },
+                  {
+                    "date": 2025,
+                    "value": 410
+                  }
+                ]
+              },
+              {
+                "name_FR": "Fraude à la commission",
+                "name_DE": "Vorausschussbetrug",
+                "definition_de": "Betrugsformen, bei der ein Vorschuss geleistet werden muss. Kontaktaufnahme mit dem Ziel, die Kosten/Gebühren für die Freigabe einer angeblichen grösseren Geldsumme zu übernehmen.",
+                "definition_fr": "Type d'escroquerie impliquant le versement d'une commission. Les auteurs prennent contact avec la victime pour qu'elle verse de l'argent pour pouvoir recevoir une somme plus importante, ce qui ne sera pas le cas en fin de compte.",
+                "values": [
+                  {
+                    "date": 2021,
+                    "value": 674
+                  },
+                  {
+                    "date": 2022,
+                    "value": 513
+                  },
+                  {
+                    "date": 2023,
+                    "value": 536
+                  },
+                  {
+                    "date": 2024,
+                    "value": 472
+                  },
+                  {
+                    "date": 2025,
+                    "value": 539
+                  }
+                ]
+              },
+              {
+                "name_FR": "Arnaque au faux support technique",
+                "name_DE": "Betrügerischer technischer Support",
+                "definition_de": "Betrug, bei dem die Täterschaft potenzielle Opfer in der Schweiz anruft, sich als Mitarbeiter des technischen Supports (Microsoft, Apple, usw.) ausgibt und behauptet, dass auf dem Computer des Opfers ein Problem vorhanden sei, welches sie lösen können. Nachdem die Täterschaft die Kontrolle über den Computer übernommen hat, nimmt sie kriminelle Handlungen vor, in der Absicht, sich finanziell zu bereichern.",
+                "definition_fr": "Escroquerie où les auteurs téléphonent à de potentielles victimes en Suisse en se faisant passer pour des collaborateurs d'assistance technique (Microsoft, Apple, etc.) et prétendent que l'ordinateur de l'appelé rencontre un problème qu'ils sont en mesure de résoudre. Après avoir pris le contrôle de l'ordinateur, les auteurs entreprennent des actions dommageables dans le but de s'enrichir.",
+                "values": [
+                  {
+                    "date": 2021,
+                    "value": 1366
+                  },
+                  {
+                    "date": 2022,
+                    "value": 1534
+                  },
+                  {
+                    "date": 2023,
+                    "value": 1912
+                  },
+                  {
+                    "date": 2024,
+                    "value": 1570
+                  },
+                  {
+                    "date": 2025,
+                    "value": 1708
+                  }
+                ]
+              },
+              {
+                "name_FR": "Romance scam",
+                "name_DE": "Romance scam",
+                "definition_de": "Vortäuschen einer Liebes- (Freundes-)beziehung, um dann Geld zu verlangen (häufig wegen eines fiktiven Härtefalls).",
+                "definition_fr": "Établissement d'une prétendue relation amoureuse ou amicale pour ensuite exiger de l'argent (souvent sous prétexte de difficultés personnelles).",
+                "values": [
+                  {
+                    "date": 2021,
+                    "value": 776
+                  },
+                  {
+                    "date": 2022,
+                    "value": 698
+                  },
+                  {
+                    "date": 2023,
+                    "value": 661
+                  },
+                  {
+                    "date": 2024,
+                    "value": 639
+                  },
+                  {
+                    "date": 2025,
+                    "value": 692
+                  }
+                ]
+              },
+              {
+                "name_FR": "Fraudes via les petites annonces",
+                "name_DE": "Betrug mit Kleinanzeigen",
+                "values": [
+                  {
+                    "date": 2021,
+                    "value": 7530
+                  },
+                  {
+                    "date": 2022,
+                    "value": 9010
+                                    },
+                  {
+                    "date": 2023,
+                    "value": 11013
+                  },
+                  {
+                    "date": 2024,
+                    "value": 11073
+                  },
+                  {
+                    "date": 2025,
+                    "value": 9457
+                  }
+                ],
+                "definition_de": "Ein betrügerisches Angebot wird auf Kleinanzeige- und Onlineplattformen von der Täterschaft publiziert.",
+                "definition_fr": "Les auteurs publient des annonces frauduleuses sur des sites en ligne.",
+                "children": [
+              {
+                "name_FR": "Petites annonces (objet vendue non payé)",
+                "name_DE": "Kleinanzeigenplattform: Waren nicht bezahlt",
+                "definition_de": "Die Ware wird vom Verkäufer gesendet, jedoch nicht bezahlt.",
+                "definition_fr": "La marchandise est livrée par le vendeur mais n'est pas payée.",
+                "values": [
+                  {
+                    "date": 2021,
+                    "value": 646
+                  },
+                  {
+                    "date": 2022,
+                    "value": 527
+                  },
+                  {
+                    "date": 2023,
+                    "value": 570
+                  },
+                  {
+                    "date": 2024,
+                    "value": 448
+                  },
+                  {
+                    "date": 2025,
+                    "value": 352
+                  }
+                ]
+              },
+              {
+                "name_FR": "Petites annonces (objet payé non livré)",
+                "name_DE": "Kleinanzeigenplattform: Waren nicht geliefert",
+                "definition_de": "Der Käufer bezahlt die Ware, diese wird jedoch nie geliefert.",
+                "definition_fr": "L'acheteur paie la marchandise, qui ne sera toutefois jamais livrée.",
+                "values": [
+                  {
+                    "date": 2021,
+                    "value": 6884
+                  },
+                  {
+                    "date": 2022,
+                    "value": 8483
+                  },
+                  {
+                    "date": 2023,
+                    "value": 10443
+                  },
+                  {
+                    "date": 2024,
+                    "value": 10625
+                  },
+                  {
+                    "date": 2025,
+                    "value": 9105
+                  }
+                ]
+              }
+            ]
+          },
+              {
+                "name_FR": "Abus d'identité/de sytèmes de paiement personneles",
+                "name_DE": "Missbrauch von Online-Zahlungssystem / fremder Identität",
+                "definition_de": "Diebstahl eines fremden persönlichen Zahlungssystems oder Identitätsdiebstahl (oder widerrechtlicher Gebrauch eines Identifikationsmerkmals einer anderen Person) für betrügerische Zwecke.",
+                "definition_fr": "Usurper des systèmes de paiement personnels, ou usurper l'identité (ou toute donnée d'identification personnelle) pour commettre des fraudes.",
+                "values": [
+                  {
+                    "date": 2021,
+                    "value": 6670
+                  },
+                  {
+                    "date": 2022,
+                    "value": 6551
+                  },
+                  {
+                    "date": 2023,
+                    "value": 10883
+                  },
+                  {
+                    "date": 2024,
+                    "value": 22293
+                  },
+                  {
+                    "date": 2025,
+                    "value": 20917
+                  }
+                ]
+              },
+              {
+                "name_FR": "Fraude à l'investissement en ligne",
+                "name_DE": "Online Anlagebetrug",
+                "definition_de": "Jemanden dazu veranlassen, in ein bestimmtes Produkt zu investieren, obwohl dieses nicht existiert oder keinen Wert resp. keine Ertragsaussichten hat. Der Handel (Kauf / Verkauf) dieser Produkte werden dem Opfer vorgetäuscht, findet aber effektiv nicht statt.",
+                "definition_fr": "Inciter quelqu’un à investir dans tel ou tel produit financier, celui-ci étant inexistant ou sans aucune valeur ou perspective de gains. Le commerce de ces produits (achat / vente) est simulé et n’a donc effectivement pas lieu.",
+                "values": [
+                  {
+                    "date": 2021,
+                    "value": 1231
+                  },
+                  {
+                    "date": 2022,
+                    "value": 1590
+                  },
+                  {
+                    "date": 2023,
+                    "value": 2356
+                  },
+                  {
+                    "date": 2024,
+                    "value": 2974
+                  },
+                  {
+                    "date": 2025,
+                    "value": 2854
+                  }
+                ]
+              },
+              {
+                "name_FR": "Autre cyber-escroquerie",
+                "name_DE": "Anderer Internetbetrug",
+                "definition_de": "Jede andere Art von Betrug, die über ein Telekommunikationsnetz oder mittels eines solchen durchgeführt wird.",
+                "definition_fr": "Tout autre type d'escroquerie réalisée sur ou au moyen d'un réseau de télécommunication.",
+                "values": [
+                  {
+                    "date": 2021,
+                    "value": 755
+                  },
+                  {
+                    "date": 2022,
+                    "value": 840
+                  },
+                  {
+                    "date": 2023,
+                    "value": 1012
+                  },
+                  {
+                    "date": 2024,
+                    "value": 862
+                  },
+                  {
+                    "date": 2025,
+                    "value": 1083
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name_FR": "Money & Package Mules",
+            "name_DE": "Money & Package Mules",
+            "definition_de": "Weiterleiten lassen von Gelder oder Waren krimineller Herkunft durch Dritte (Finanzagenten: money mules, Paketagenten: package mules). Diese Drittpersonen werden meistens über das Internet via Kleinanzeigen für Teilzeitstellen rekrutiert.",
+            "definition_fr": "Le fait de faire transférer de l'argent ou des marchandises d'origine criminelle par des tiers, pour la plupart recrutés sur Internet à travers de petites annonces de travail à temps partiel (personnes qui transfèrent de l'argent d'un pays à l'autre : money mules ; personnes qui acheminent des colis vers une autre destination : package mules).",
+            "values": [
+              {
+                "date": 2021,
+                "value": 2113
+              },
+              {
+                "date": 2022,
+                "value": 2045
+              },
+              {
+                "date": 2023,
+                "value": 3002
+              },
+              {
+                "date": 2024,
+                "value": 3757
+              },
+              {
+                "date": 2025,
+                "value": 3875
+              }
+            ]
+          },
+          {
+            "name_FR": "Sextorsion (money)",
+            "name_DE": "Sextortion (Geld)",
+            "definition_de": "Erpressung von Geld mittels Nacktaufnahmen oder Videoclips, auf welchen das Opfer sexuelle Handlungen an sich vornimmt (masturbiert), und Androhung der Veröffentlichung des Videos auf YouTube oder des Versands z.B. an Facebook-Freunde des Opfers.",
+            "definition_fr": "Action consistant à extorquer de l'argent à une personne au moyen de photos de nu ou de vidéos sur lesquelles la victime se masturbe et à la menacer de publier la vidéo sur YouTube ou de l'envoyer par exemple à ses amis sur Facebook.",
+            "values": [
+              {
+                "date": 2021,
+                "value": 1031
+              },
+              {
+                "date": 2022,
+                "value": 1588
+              },
+              {
+                "date": 2023,
+                "value": 1696
+              },
+              {
+                "date": 2024,
+                "value": 1385
+              },
+              {
+                "date": 2025,
+                "value": 1375
+              }
+            ]
+          },
+          {
+            "name_FR": "Vol de crypto-monnaies",
+            "name_DE": "Krypto-Diebstahl",
+            "definition_de": "Kryptowährungen werden bei einem Exchanger oder von einem persönlichen Wallet gestohlen. Diebstahl eines Hardware Wallets.",
+            "definition_fr": "Vol de cryptomonnaies sur une plate-forme d'échange ou dans un portefeuille personnel. Vol d'un portefeuille physique.",
+            "values": [
+              {
+                "date": 2021,
+                "value": 96
+              },
+              {
+                "date": 2022,
+                "value": 110
+              },
+              {
+                "date": 2023,
+                "value": 85
+              },
+              {
+                "date": 2024,
+                "value": 95
+              },
+              {
+                "date": 2025,
+                "value": 162
+              }
+            ]
+          }
+        ]
       },
       {
-        "date": 2022,
-        "value": 29677
+        "name_FR": "Cyber-délits sexuels",
+        "name_DE": "Cyber Sexualdelikte",
+        "definition_de": "siehe Unterkategorien",
+        "definition_fr": "voir sous-catégories",
+        "values": [
+          {
+            "date": 2021,
+            "value": 2572
+          },
+          {
+            "date": 2022,
+            "value": 2820
+          },
+          {
+            "date": 2023,
+            "value": 2611
+          },
+          {
+            "date": 2024,
+            "value": 2922
+          },
+          {
+            "date": 2025,
+            "value": 2742
+          }
+        ],
+        "children": [
+          {
+            "name_FR": "Pornographie interdite",
+            "name_DE": "Verbotene Pornografie",
+            "definition_de": "Unter verbotener oder illegaler Pornografie versteht man Darstellungen, die sexuelle Handlungen mit Kindern, mit Tieren und/oder Gewalttätigkeiten zum Inhalt haben. Verboten ist sowohl das Herstellen, Verbreiten und Besitzen, als auch das Konsumieren solcher Aufnahmen (absolutes Verbot).",
+            "definition_fr": "Par pornographie interdite ou illégale, on entend des représentations d'actes sexuels impliquant des enfants, des animaux et/ou de la violence. Sont interdites aussi bien la fabrication, la diffusion et la possession de tels enregistrements que leur consommation (interdiction absolue).",
+            "values": [
+              {
+                "date": 2021,
+                "value": 2243
+              },
+              {
+                "date": 2022,
+                "value": 2594
+              },
+              {
+                "date": 2023,
+                "value": 2350
+              },
+              {
+                "date": 2024,
+                "value": 2705
+              },
+              {
+                "date": 2025,
+                "value": 2504
+              }
+            ]
+          },
+          {
+            "name_FR": "Grooming",
+            "name_DE": "Grooming",
+            "definition_de": "Knüpfen von sexuell motivierten Kontakten zu Kindern übers Internet, z.B. in Chatrooms oder über Social Media. Gewisse Täter streben ein Treffen im realen Leben an, um mit dem Opfer sexuelle Handlungen vorzunehmen.",
+            "definition_fr": "Le fait d'établir des contacts avec des enfants via Internet à des fins sexuelles, par exemple dans des forums de discussion ou sur les réseaux sociaux. Certains malfaiteurs visent une rencontre dans la vie réelle afin de se livrer à des actes sexuels avec la victime.",
+            "values": [
+              {
+                "date": 2021,
+                "value": 141
+              },
+              {
+                "date": 2022,
+                "value": 141
+              },
+              {
+                "date": 2023,
+                "value": 127
+              },
+              {
+                "date": 2024,
+                "value": 135
+              },
+              {
+                "date": 2025,
+                "value": 159
+              }
+            ]
+          },
+          {
+            "name_FR": "Sextorsion (sexe)",
+            "name_DE": "Sextortion (Sex)",
+            "definition_de": "Erpressung von weiterem Bildmaterial mit der Drohung, Nacktaufnahmen des Opfers zu veröffentlichen.",
+            "definition_fr": "Le fait de menacer une personne de publier des photos de nu d'elle afin d'obtenir d'autres images.",
+            "values": [
+              {
+                "date": 2021,
+                "value": 153
+              },
+              {
+                "date": 2022,
+                "value": 65
+              },
+              {
+                "date": 2023,
+                "value": 108
+              },
+              {
+                "date": 2024,
+                "value": 68
+              },
+              {
+                "date": 2025,
+                "value": 66
+              }
+            ]
+          },
+          {
+            "name_FR": "Live Streaming",
+            "name_DE": "Live Streaming",
+            "definition_de": "Teilhaben an sexuellen Handlungen mit Kindern via Webcam. Der Konsument / Anstifter meldet z.B. via Chat seine Wünsche, bezahlt den geforderten Betrag und konsumiert danach den sexuellen Missbrauch von Minderjährigen über Webcam.",
+            "definition_fr": "Le fait de prendre part, via une webcam, à des actes d'ordre sexuel impliquant des enfants. Le consommateur / instigateur communique ses souhaits, par exemple via un forum de discussion, puis paie le montant demandé et visionne ensuite via une webcam les abus commis sur des mineurs.",
+            "values": [
+              {
+                "date": 2021,
+                "value": 35
+              },
+              {
+                "date": 2022,
+                "value": 20
+              },
+              {
+                "date": 2023,
+                "value": 26
+              },
+              {
+                "date": 2024,
+                "value": 14
+              },
+              {
+                "date": 2025,
+                "value": 13
+              }
+            ]
+          }
+        ]
       },
       {
-        "date": 2023,
-        "value": 40496
+        "name_FR": "Cyber-atteinte à la réputation et pratiques déloyales",
+        "name_DE": "Cyber Rufschädigung & unlauteres Verhalten",
+        "definition_de": "siehe Unterkategorien",
+        "definition_fr": "voir sous-catégories",
+        "values": [
+          {
+            "date": 2021,
+            "value": 1103
+          },
+          {
+            "date": 2022,
+            "value": 847
+          },
+          {
+            "date": 2023,
+            "value": 725
+          },
+          {
+            "date": 2024,
+            "value": 698
+          },
+          {
+            "date": 2025,
+            "value": 766
+          }
+        ],
+        "children": [
+          {
+            "name_FR": "Cybersquatting",
+            "name_DE": "Cybersquatting",
+            "definition_de": "Verwenden / Registrieren von leicht zu verwechselnden Domainnamen. Registrierung von Domainnamen, die dem Registrierenden eigentlich nicht zustehen oder die sehr ähnlich sind wie die Namen von Firmen, Behörden, Marken oder bekannten Personen (z.B. www.abmin.ch anstatt www.admin.ch).",
+            "definition_fr": "Utilisation / Enregistrement de noms de domaine faciles à confondre avec ceux de sites existants. Enregistrement de noms de domaine auxquels le titulaire ne peut pas prétendre, ou qui sont très similaires à des noms d'entreprises, d'autorités, de marques ou de personnes connues (par. ex. www.abmin.ch au lieu de www.admin.ch).",
+            "values": [
+              {
+                "date": 2021,
+                "value": 37
+              },
+              {
+                "date": 2022,
+                "value": 71
+              },
+              {
+                "date": 2023,
+                "value": 53
+              },
+              {
+                "date": 2024,
+                "value": 58
+              },
+              {
+                "date": 2025,
+                "value": 88
+              }
+            ]
+          },
+          {
+            "name_FR": "Cyber-atteinte à la réputation (business)",
+            "name_DE": "Cyber-Rufschädigung (geschäftlich)",
+            "definition_de": "Im Internet publizierte negative Kommentare, z.B. unrichtige, täuschende oder unnötig verletzende Behauptungen zu Produkten oder Dienstleistungen eines Dritten.",
+            "definition_fr": "Le fait de publier sur Internet des commentaires négatifs, par exemple des allégations inexactes, fallacieuses ou inutilement blessantes, à l'endroit des produits ou prestations d'un tiers.",
+            "values": [
+              {
+                "date": 2021,
+                "value": 107
+              },
+              {
+                "date": 2022,
+                "value": 69
+              },
+              {
+                "date": 2023,
+                "value": 58
+              },
+              {
+                "date": 2024,
+                "value": 54
+              },
+              {
+                "date": 2025,
+                "value": 68
+              }
+            ]
+          },
+          {
+            "name_FR": "Cyberbullying & Cybermobbing",
+            "name_DE": "Cyberbullying & Cybermobbing",
+            "definition_de": "Verleumdung, Blossstellung oder Belästigung von Personen durch Verbreitung von diffamierenden Texten, Bildern oder Filmen.",
+            "definition_fr": "Le fait de calomnier, d'humilier ou de harceler des personnes en diffusant des textes, des images ou des vidéos diffamatoires à leur sujet.",
+            "values": [
+              {
+                "date": 2021,
+                "value": 959
+              },
+              {
+                "date": 2022,
+                "value": 707
+              },
+              {
+                "date": 2023,
+                "value": 614
+              },
+              {
+                "date": 2024,
+                "value": 586
+              },
+              {
+                "date": 2025,
+                "value": 610
+              }
+            ]
+          }
+        ]
       },
       {
-        "date": 2024,
-        "value": 55413
+        "name_FR": "Commerce illégal sur le darknet",
+        "name_DE": "Illegaler Handel im Darknet",
+        "definition_de": "Kauf/Verkauf von illegalen Gütern und Dienstleistungen im Darknet (Waffen, Betäubungsmittel, Medikamente, gestohlene Ware usw.).",
+        "definition_fr": "Achat / Vente de produits et services illégaux sur le Darknet (armes, stupéfiants, médicaments, marchandises volées, etc.).",
+        "values": [
+          {
+            "date": 2021,
+            "value": 1
+          },
+          {
+            "date": 2022,
+            "value": 0
+          },
+          {
+            "date": 2023,
+            "value": 4
+          },
+          {
+            "date": 2024,
+            "value": 0
+          },
+          {
+            "date": 2025,
+            "value": 0
+          }
+        ]
       },
       {
-        "date": 2025,
-        "value": 54247
-      }
-    ],
-      "children": [
-        {
-          "name_FR": "Phishing",
-          "name_DE": "Phishing",
-          "definition_de": "Erhältlich machen von persönlichen und/oder vertraulichen Daten in unbefugter Weise.",
-          "definition_fr": "Rendre accessibles des données personnelles ou confidentielles de manière illicite.",
-              "values": [
-      {
-        "date": 2021,
-        "value": 1210
-      },
-      {
-        "date": 2022,
-        "value": 2236
-      },
-      {
-        "date": 2023,
-        "value": 3796
-      },
-      {
-        "date": 2024,
-        "value": 5930
-      },
-      {
-        "date": 2025,
-        "value": 7409
+        "name_FR": "Data leaking",
+        "name_DE": "Data leaking",
+        "definition_de": "Ideologisch oder finanziell motiviertes Weitergeben von vertraulichen Informationen.",
+        "definition_fr": "Transmission d'informations confidentielles pour des raisons idéologiques ou financières.",
+        "values": [
+          {
+            "date": 2021,
+            "value": 4
+          },
+          {
+            "date": 2022,
+            "value": 1
+          },
+          {
+            "date": 2023,
+            "value": 3
+          },
+          {
+            "date": 2024,
+            "value": 1
+          },
+          {
+            "date": 2025,
+            "value": 6
+          }
+        ]
       }
     ]
-        },
-        {
-          "name_FR": "Hacking",
-          "name_DE": "Hacking",
-          "definition_de": "siehe Unterkategorien",
-          "definition_fr": "voir sous-catégories",
-                        "values": [
-      {
-        "date": 2021,
-        "value": 977
-      },
-      {
-        "date": 2022,
-        "value": 1042
-      },
-      {
-        "date": 2023,
-        "value": 1093
-      },
-      {
-        "date": 2024,
-        "value": 1350
-      },
-      {
-        "date": 2025,
-        "value": 1323
-      }
-    ],
-          "children": [
-            {
-              "name_FR": "Pénétrer un système informatique de force",
-              "name_DE": "Gewaltsames Eindringen in Datenverarbeitungssystem",
-              "definition_de": "Gewaltsames Eindringen in ein Datenverarbeitungssystem, um Personendaten zu entwenden oder die Inhalte zu betrügerischen oder politisch-religiösen Zwecken zu verändern (Hacktivismus).",
-              "definition_fr": "Hacker un site web dans le but de voler les données de la personne enregistrée ou inscrites sur les serveurs du site web ou d'en modifier le contenu pour des raisons politico-religieuses (hacktivisme).",
-                  "values": [
-      {
-        "date": 2021,
-        "value": 324
-      },
-      {
-        "date": 2022,
-        "value": 246
-      },
-      {
-        "date": 2023,
-        "value": 214
-      },
-      {
-        "date": 2024,
-        "value": 186
-      },
-      {
-        "date": 2025,
-        "value": 199
-      }
-    ]
-            },
-            {
-              "name_FR": "Accéder sans un système informatique au moyen de codes d'accès externes",
-              "name_DE": "Eindringen in Datenverarbeitungssystem mit fremden Zugangsdaten",
-              "definition_de": "Eindringen in ein Datenverarbeitungssystem mit fremden Zugangsdaten, um Personendaten zu entwenden oder die Inhalte zu betrügerischen oder politisch-religiösen Zwecken zu verändern (Hacktivismus).",
-              "definition_fr": "Accéder indument dans un système informatique au moyen de données d'accès externes, dans le but de soutirer des données personnelles, ou d’en modifier le contenu à des fins frauduleuses ou politico-religieuses (hacktivisme).",
-                  "values": [
-      {
-        "date": 2021,
-        "value": 653
-      },
-      {
-        "date": 2022,
-        "value": 796
-      },
-      {
-        "date": 2023,
-        "value": 879
-      },
-      {
-        "date": 2024,
-        "value": 1164
-      },
-      {
-        "date": 2025,
-        "value": 1124
-      }
-    ]
-            }
-          ]
-        },
-        {
-          "name_FR": "Malware",
-          "name_DE": "Malware",
-                  "values": [
-      {
-        "date": 2021,
-        "value": 521
-      },
-      {
-        "date": 2022,
-        "value": 433
-      },
-      {
-        "date": 2023,
-        "value": 476
-      },
-      {
-        "date": 2024,
-        "value": 361
-      },
-      {
-        "date": 2025,
-        "value": 327
-      }
-    ],
-          "definition_de": "siehe Unterkategorien",
-          "definition_fr": "voir sous-catégories",
-          "children": [
-            {
-              "name_FR": "Ransomware",
-              "name_DE": "Ransomware",
-              "definition_de": "Informatiksystem sperren/verschlüsseln und Geldforderung als Freikauf für die Entschlüsselung stellen. Ransomware ist eine Schadsoftware, die – einmal aktiviert – die Computer- oder Smartphonedaten des Opfers verschlüsselt und eine Geldforderung für die Entschlüsselung stellt. In einer Variante davon wird der Computer oder das Smartphone (manchmal einzig der Browser) infiziert und gesperrt. Sodann erscheint eine vermeintlich behördliche Mitteilung, welche die betroffene Person zu einer Bussenzahlung mittels digitaler Währung bzw. elektronischer Zahlungsmittel auffordert, damit das Informatiksystem wieder entsperrt wird.",
-              "definition_fr": "Bloquer/Chiffrer un système informatique et demander une rançon. Un Ransomware est un logiciel malveillant qui, une fois activé, chiffre les données de l’ordinateur ou du smartphone de la victime et requiert une somme d’argent pour les déverrouiller. Une autre version infecte et bloque l'ordinateur ou le smartphone (parfois aussi seulement le navigateur). Il envoie alors une notification apparemment officielle exigeant de la victime le paiement d'une amende en monnaie virtuelle, respectivement par le biais d’un moyen de paiement électronique, pour débloquer le système informatique.",
-                  "values": [
-      {
-        "date": 2021,
-        "value": 340
-      },
-      {
-        "date": 2022,
-        "value": 307
-      },
-      {
-        "date": 2023,
-        "value": 252
-      },
-      {
-        "date": 2024,
-        "value": 174
-      },
-      {
-        "date": 2025,
-        "value": 229
-      }
-    ]
-            },
-            {
-              "name_FR": "Cheval de Troie e-banking",
-              "name_DE": "E-Banking Trojaner",
-              "definition_de": "Übernehmen / Steuern einer Sitzung. Infektion des Datenverarbeitungssystems mit Schadsoftware, die es ermöglicht, E-Banking-Sitzungen zu übernehmen und unbemerkt Geld-Transaktionen auf in- und ausländische Konten auszulösen. Infektion von Smartphones mit zusätzlicher Schadsoftware, um Nachrichten von Authentifizierungs- mechanismen abzufangen.",
-              "definition_fr": "Prise en main d'une session. Infection du système de traitement des données à l'aide d'un logiciel malveillant (dit malware ou maliciel) qui permet d'ouvrir des sessions d'e-banking et de générer, de manière inaperçue, des transferts d'argent sur des comptes en Suisse et à l'étranger ; infection de smartphones via un malware supplémentaire qui intercepte les messages envoyés par les mécanismes d'authentification.",
-                  "values": [
-      {
-        "date": 2021,
-        "value": 82
-      },
-      {
-        "date": 2022,
-        "value": 49
-      },
-      {
-        "date": 2023,
-        "value": 38
-      },
-      {
-        "date": 2024,
-        "value": 49
-      },
-      {
-        "date": 2025,
-        "value": 21
-      }
-    ]
-            },
-            {
-              "name_FR": "Spyware",
-              "name_DE": "Spyware",
-              "definition_de": "Infizierung eines Informatiksystems (wie Computer, Smartphone) mit einer Schadsoft-ware, die die Aktivitäten der Nutzerin oder des Nutzers ausspioniert (z. B. besuchte Webseiten) und die Daten via Internetverbindung an die Täterschaft übermittelt.",
-              "definition_fr": "Infection d'un système informatique (ordinateur, smartphone, etc.) par un logiciel malveillant permettant d’espionner les activités (p. ex. sites web consultés) de l’utilisateur et transmettre les données ainsi obtenues à l’auteur via une connexion Internet.",
-                  "values": [
-      {
-        "date": 2021,
-        "value": 25
-      },
-      {
-        "date": 2022,
-        "value": 15
-      },
-      {
-        "date": 2023,
-        "value": 13
-      },
-      {
-        "date": 2024,
-        "value": 19
-      },
-      {
-        "date": 2025,
-        "value": 10
-      }
-    ]
-            },
-            {
-              "name_FR": "Rogueware & Scareware",
-              "name_DE": "Rogueware & Scareware",
-              "definition_de": "Auf dem Bildschirm des Computers (oder eines anderen Informatiksystems) erscheint die Mitteilung, der Computer sei infiziert und man müsse ein Programm installieren, um die Situation zu kontrollieren.",
-              "definition_fr": "Un message s'affiche sur l'ordinateur (ou un autre système informatique) qui alarme la victime que son ordinateur est infecté et qu'il s'agit d'installer un programme pour remédier à cette situation.",
-                  "values": [
-      {
-        "date": 2021,
-        "value": 61
-      },
-      {
-        "date": 2022,
-        "value": 45
-      },
-      {
-        "date": 2023,
-        "value": 163
-      },
-      {
-        "date": 2024,
-        "value": 110
-      },
-      {
-        "date": 2025,
-        "value": 58
-      }
-    ]
-            },
-            {
-              "name_FR": "Botnet",
-              "name_DE": "Botnet",
-              "definition_de": "Botnet ist die Bezeichnung für eine Gruppe von Computern, die von einer oder mehreren Malware infiziert wurden. Ein solches Netz von befallenen Computern (auch Zombies oder Bots genannt) kann von Cyberkriminellen kontrolliert und aktiviert werden, um kriminelle Handlungen zu begehen.",
-              "definition_fr": "Le terme 'botnet' désigne un groupe d'ordinateurs qui ont été contaminés par un ou plusieurs malwares. Un tel réseau d'ordinateurs compromis (aussi appelés des 'zombies' ou 'bots'), contrôlé par les cybercriminels, peut être activé par ces derniers pour exécuter des actions malveillantes.",
-                  "values": [
-      {
-        "date": 2021,
-        "value": 13
-      },
-      {
-        "date": 2022,
-        "value": 17
-      },
-      {
-        "date": 2023,
-        "value": 10
-      },
-      {
-        "date": 2024,
-        "value": 9
-      },
-      {
-        "date": 2025,
-        "value": 9
-      }
-    ]
-            }
-          ]
-        },
-        {
-          "name_FR": "DDOS",
-          "name_DE": "DDOS",
-          "definition_de": "Angreifen der Verfügbarkeit eines Datenverarbeitungssystems durch Überlast. DDoS (Distributed Denial of Service) Angriffe werden gleichzeitig durch mehrere Rechner ausgeführt.",
-          "definition_fr": "Attaque visant à surcharger un système informatique pour le rendre indisponible. Les attaques DDoS (Distributed Denial of Service = déni de service) sont menées simultanément par plusieurs ordinateurs.",
-    "values": [
-      {
-        "date": 2021,
-        "value": 32
-      },
-      {
-        "date": 2022,
-        "value": 16
-      },
-      {
-        "date": 2023,
-        "value": 17
-      },
-      {
-        "date": 2024,
-        "value": 30
-      },
-      {
-        "date": 2025,
-        "value": 22
-      }
-    ]
-        },
-        {
-          "name_FR": "Cyber-escroquerie",
-          "name_DE": "Cyberbetrug",
-          "definition_de": "siehe Unterkategorien",
-          "definition_fr": "voir sous-catégories",
-    "values": [
-      {
-        "date": 2021,
-        "value": 20691
-      },
-      {
-        "date": 2022,
-        "value": 22207
-      },
-      {
-        "date": 2023,
-        "value": 30331
-      },
-      {
-        "date": 2024,
-        "value": 42505
-      },
-      {
-        "date": 2025,
-        "value": 39754
-      }
-    ],
-          "children": [
-            {
-              "name_FR": "CEO/BEC Fraud",
-              "name_DE": "CEO/BEC Betrug",
-              "definition_de": "Die Täter geben sich als Vertreter eines Unternehmen aus (behaupten, deren CEO, Mitarbeiter oder Anwalt zu sein) und veranlassen einen Geschäftspartner dieses Unternehmens oder eine dort angestellte Person, Geld auf ein ungewöhnliches Konto im Ausland zu überweisen.",
-              "definition_fr": "Se faire passer pour un représentant d'une entreprise (président, employé, avocat) et inciter un partenaire commercial de l'entreprise ou un employé à verser de l'argent sur un compte inhabituel à l'étranger.",
-    "values": [
-      {
-        "date": 2021,
-        "value": 412
-      },
-      {
-        "date": 2022,
-        "value": 401
-      },
-      {
-        "date": 2023,
-        "value": 412
-      },
-      {
-        "date": 2024,
-        "value": 504
-      },
-      {
-        "date": 2025,
-        "value": 560
-      }
-    ]
-            },
-            {
-              "name_FR": "Magasins en ligne frauduleux",
-              "name_DE": "Betrügerische Internetshops",
-              "definition_de": "Die Täter geben sich als Vertreter eines Unternehmen aus (behaupten, deren CEO, Mitarbeiter oder Anwalt zu sein) und veranlassen einen Geschäftspartner dieses Unternehmens oder eine dort angestellte Person, Geld auf ein ungewöhnliches Konto im Ausland zu überweisen.",
-              "definition_fr": "Un acheteur commande et paie des marchandises dans un magasin en ligne (frauduleux), mais ne les reçoit jamais, ou alors il reçoit des contrefaçons ou des marchandises défectueuses ou de valeur inférieure.",
-    "values": [
-      {
-        "date": 2021,
-        "value": 632
-      },
-      {
-        "date": 2022,
-        "value": 543
-      },
-      {
-        "date": 2023,
-        "value": 678
-      },
-      {
-        "date": 2024,
-        "value": 890
-      },
-      {
-        "date": 2025,
-        "value": 902
-      }
-    ]
-            },
-            {
-              "name_FR": "Fausses annonces immobilières",
-              "name_DE": "Falsche Immobilienanzeigen",
-              "definition_de": "Die Täterschaft publiziert eine falsche Immobilienanzeige auf einer Seite mit Immobilien- oder Kleinanzeigen und verlangt von den interessierten Personen, dass sie im Voraus eine Kaution bezahlen.",
-              "definition_fr": "Les auteurs publient une fausse annonce immobilière sur un site de petites annonces et demandent aux intéressés de verser à l'avance une caution.",
-    "values": [
-      {
-        "date": 2021,
-        "value": 518
-      },
-      {
-        "date": 2022,
-        "value": 433
-      },
-      {
-        "date": 2023,
-        "value": 525
-      },
-      {
-        "date": 2024,
-        "value": 657
-      },
-      {
-        "date": 2025,
-        "value": 632
-      }
-    ]
-            },
-            {
-              "name_FR": "Fausses requêtes d'aide",
-              "name_DE": "Falsche Untrestützungsanfragen",
-              "definition_de": "Betrug, bei dem die Täter von gehackten Konten (Email, Social Media, Chat, usw.), im Namen des Kontoinhabers, falsche Unterstützungsanfragen an dessen Kontakte senden (Anfragen finanzieller Natur).",
-              "definition_fr": "Escroquerie consistant à envoyer de fausses requêtes d'aide (financière) aux contacts des comptes piratés (e-mail, médias sociaux, chat, etc.) au nom du titulaire du compte.",
-                  "values": [
-      {
-        "date": 2021,
-        "value": 127
-      },
-      {
-        "date": 2022,
-        "value": 94
-      },
-      {
-        "date": 2023,
-        "value": 343
-      },
-      {
-        "date": 2024,
-        "value": 571
-      },
-      {
-        "date": 2025,
-        "value": 410
-      }
-    ]
-            },
-            {
-              "name_FR": "Fraude à la commission",
-              "name_DE": "Vorausschussbetrug",
-              "definition_de": "Betrugsformen, bei der ein Vorschuss geleistet werden muss. Kontaktaufnahme mit dem Ziel, die Kosten/Gebühren für die Freigabe einer angeblichen grösseren Geldsumme zu übernehmen.",
-              "definition_fr": "Type d'escroquerie impliquant le versement d'une commission. Les auteurs prennent contact avec la victime pour qu'elle verse de l'argent pour pouvoir recevoir une somme plus importante, ce qui ne sera pas le cas en fin de compte.",
-                  "values": [
-      {
-        "date": 2021,
-        "value": 674
-      },
-      {
-        "date": 2022,
-        "value": 513
-      },
-      {
-        "date": 2023,
-        "value": 536
-      },
-      {
-        "date": 2024,
-        "value": 472
-      },
-      {
-        "date": 2025,
-        "value": 539
-      }
-    ]
-            },
-            {
-              "name_FR": "Arnaque au faux support technique",
-              "name_DE": "Betrügerischer technischer Support",
-              "definition_de": "Betrug, bei dem die Täterschaft potenzielle Opfer in der Schweiz anruft, sich als Mitarbeiter des technischen Supports (Microsoft, Apple, usw.) ausgibt und behauptet, dass auf dem Computer des Opfers ein Problem vorhanden sei, welches sie lösen können. Nachdem die Täterschaft die Kontrolle über den Computer übernommen hat, nimmt sie kriminelle Handlungen vor, in der Absicht, sich finanziell zu bereichern.",
-              "definition_fr": "Escroquerie où les auteurs téléphonent à de potentielles victimes en Suisse en se faisant passer pour des collaborateurs d'assistance technique (Microsoft, Apple, etc.) et prétendent que l'ordinateur de l'appelé rencontre un problème qu'ils sont en mesure de résoudre. Après avoir pris le contrôle de l'ordinateur, les auteurs entreprennent des actions dommageables dans le but de s'enrichir.",
-                  "values": [
-      {
-        "date": 2021,
-        "value": 1366
-      },
-      {
-        "date": 2022,
-        "value": 1534
-      },
-      {
-        "date": 2023,
-        "value": 1912
-      },
-      {
-        "date": 2024,
-        "value": 1570
-      },
-      {
-        "date": 2025,
-        "value": 1708
-      }
-    ]
-            },
-            {
-              "name_FR": "Romance scam",
-              "name_DE": "Romance scam",
-              "definition_de": "Vortäuschen einer Liebes- (Freundes-)beziehung, um dann Geld zu verlangen (häufig wegen eines fiktiven Härtefalls).",
-              "definition_fr": "Établissement d'une prétendue relation amoureuse ou amicale pour ensuite exiger de l'argent (souvent sous prétexte de difficultés personnelles).",
-                  "values": [
-      {
-        "date": 2021,
-        "value": 776
-      },
-      {
-        "date": 2022,
-        "value": 698
-      },
-      {
-        "date": 2023,
-        "value": 661
-      },
-      {
-        "date": 2024,
-        "value": 639
-      },
-      {
-        "date": 2025,
-        "value": 692
-      }
-    ]
-            },
-            {
-              "name_FR": "Petites annonces (objet vendue non payé)",
-              "name_DE": "Kleinanzeigenplattform: Waren nicht bezahlt",
-              "definition_de": "Die Ware wird vom Verkäufer gesendet, jedoch nicht bezahlt.",
-              "definition_fr": "La marchandise est livrée par le vendeur mais n'est pas payée.",
-                  "values": [
-      {
-        "date": 2021,
-        "value": 646
-      },
-      {
-        "date": 2022,
-        "value": 527
-      },
-      {
-        "date": 2023,
-        "value": 570
-      },
-      {
-        "date": 2024,
-        "value": 448
-      },
-      {
-        "date": 2025,
-        "value": 352
-      }
-    ]
-            },
-            {
-              "name_FR": "Petites annonces (objet payé non livré)",
-              "name_DE": "Kleinanzeigenplattform: Waren nicht geliefert",
-              "definition_de": "Ein betrügerisches Angebot wird auf Kleinanzeige- und Onlineplattformen von der Täterschaft publiziert. Der Käufer bezahlt die Ware, diese wird jedoch nie geliefert.",
-              "definition_fr": "Les auteurs publient des annonces frauduleuses sur des sites en ligne. L'acheteur paie la marchandise, qui ne sera toutefois jamais livrée.",
-                  "values": [
-      {
-        "date": 2021,
-        "value": 6884
-      },
-      {
-        "date": 2022,
-        "value": 8483
-      },
-      {
-        "date": 2023,
-        "value": 10443
-      },
-      {
-        "date": 2024,
-        "value": 10625
-      },
-      {
-        "date": 2025,
-        "value": 9105
-      }
-    ]
-            },
-            {
-              "name_FR": "Abus d'identité/de sytèmes de paiement personneles pour commettre des fraudes",
-              "name_DE": "Missbrauch von Online-Zahlungssystem oder fremder Identität für Betrug",
-              "definition_de": "Diebstahl eines fremden persönlichen Zahlungssystems oder Identitätsdiebstahl (oder widerrechtlicher Gebrauch eines Identifikationsmerkmals einer anderen Person) für betrügerische Zwecke.",
-              "definition_fr": "Usurper des systèmes de paiement personnels, ou usurper l'identité (ou toute donnée d'identification personnelle) pour commettre des fraudes.",
-                  "values": [
-      {
-        "date": 2021,
-        "value": 6670
-      },
-      {
-        "date": 2022,
-        "value": 6551
-      },
-      {
-        "date": 2023,
-        "value": 10883
-      },
-      {
-        "date": 2024,
-        "value": 22293
-      },
-      {
-        "date": 2025,
-        "value": 20917
-      }
-    ]
-            },
-            {
-              "name_FR": "Fraude à l'investissement en ligne",
-              "name_DE": "Online Anlagebetrug",
-              "definition_de": "Jemanden dazu veranlassen, in ein bestimmtes Produkt zu investieren, obwohl dieses nicht existiert oder keinen Wert resp. keine Ertragsaussichten hat. Der Handel (Kauf / Verkauf) dieser Produkte werden dem Opfer vorgetäuscht, findet aber effektiv nicht statt.",
-              "definition_fr": "Inciter quelqu’un à investir dans tel ou tel produit financier, celui-ci étant inexistant ou sans aucune valeur ou perspective de gains. Le commerce de ces produits (achat / vente) est simulé et n’a donc effectivement pas lieu.",
-                  "values": [
-      {
-        "date": 2021,
-        "value": 1231
-      },
-      {
-        "date": 2022,
-        "value": 1590
-      },
-      {
-        "date": 2023,
-        "value": 2356
-      },
-      {
-        "date": 2024,
-        "value": 2974
-      },
-      {
-        "date": 2025,
-        "value": 2854
-      }
-    ]
-            },
-            {
-              "name_FR": "Autre cyber-escroquerie",
-              "name_DE": "Anderer Internetbetrug",
-              "definition_de": "Jede andere Art von Betrug, die über ein Telekommunikationsnetz oder mittels eines solchen durchgeführt wird.",
-              "definition_fr": "Tout autre type d'escroquerie réalisée sur ou au moyen d'un réseau de télécommunication.",
-                  "values": [
-      {
-        "date": 2021,
-        "value": 755
-      },
-      {
-        "date": 2022,
-        "value": 840
-      },
-      {
-        "date": 2023,
-        "value": 1012
-      },
-      {
-        "date": 2024,
-        "value": 862
-      },
-      {
-        "date": 2025,
-        "value": 1083
-      }
-    ]
-            }
-          ]
-        },
-        {
-          "name_FR": "Money & Package Mules",
-          "name_DE": "Money & Package Mules",
-          "definition_de": "Weiterleiten lassen von Gelder oder Waren krimineller Herkunft durch Dritte (Finanzagenten: money mules, Paketagenten: package mules). Diese Drittpersonen werden meistens über das Internet via Kleinanzeigen für Teilzeitstellen rekrutiert.",
-          "definition_fr": "Le fait de faire transférer de l'argent ou des marchandises d'origine criminelle par des tiers, pour la plupart recrutés sur Internet à travers de petites annonces de travail à temps partiel (personnes qui transfèrent de l'argent d'un pays à l'autre : money mules ; personnes qui acheminent des colis vers une autre destination : package mules).",
-              "values": [
-      {
-        "date": 2021,
-        "value": 2113
-      },
-      {
-        "date": 2022,
-        "value": 2045
-      },
-      {
-        "date": 2023,
-        "value": 3002
-      },
-      {
-        "date": 2024,
-        "value": 3757
-      },
-      {
-        "date": 2025,
-        "value": 3875
-      }
-    ]
-        },
-        {
-          "name_FR": "Sextorsion (money)",
-          "name_DE": "Sextortion (Geld)",
-          "definition_de": "Erpressung von Geld mittels Nacktaufnahmen oder Videoclips, auf welchen das Opfer sexuelle Handlungen an sich vornimmt (masturbiert), und Androhung der Veröffentlichung des Videos auf YouTube oder des Versands z.B. an Facebook-Freunde des Opfers.",
-          "definition_fr": "Action consistant à extorquer de l'argent à une personne au moyen de photos de nu ou de vidéos sur lesquelles la victime se masturbe et à la menacer de publier la vidéo sur YouTube ou de l'envoyer par exemple à ses amis sur Facebook.",
-              "values": [
-      {
-        "date": 2021,
-        "value": 1031
-      },
-      {
-        "date": 2022,
-        "value": 1588
-      },
-      {
-        "date": 2023,
-        "value": 1696
-      },
-      {
-        "date": 2024,
-        "value": 1385
-      },
-      {
-        "date": 2025,
-        "value": 1375
-      }
-    ]
-        },
-        {
-          "name_FR": "Vol de crypto-monnaies",
-          "name_DE": "Krypto-Diebstahl",
-          "definition_de": "Kryptowährungen werden bei einem Exchanger oder von einem persönlichen Wallet gestohlen. Diebstahl eines Hardware Wallets.",
-          "definition_fr": "Vol de cryptomonnaies sur une plate-forme d'échange ou dans un portefeuille personnel. Vol d'un portefeuille physique.",
-              "values": [
-      {
-        "date": 2021,
-        "value": 96
-      },
-      {
-        "date": 2022,
-        "value": 110
-      },
-      {
-        "date": 2023,
-        "value": 85
-      },
-      {
-        "date": 2024,
-        "value": 95
-      },
-      {
-        "date": 2025,
-        "value": 162
-      }
-    ]
-        }
-      ]
-    },
-    {
-      "name_FR": "Cyber-délits sexuels",
-      "name_DE": "Cyber Sexualdelikte",
-      "definition_de": "siehe Unterkategorien",
-      "definition_fr": "voir sous-catégories",
-          "values": [
-      {
-        "date": 2021,
-        "value": 2572
-      },
-      {
-        "date": 2022,
-        "value": 2820
-      },
-      {
-        "date": 2023,
-        "value": 2611
-      },
-      {
-        "date": 2024,
-        "value": 2922
-      },
-      {
-        "date": 2025,
-        "value": 2742
-      }
-    ],
-      "children": [
-        {
-          "name_FR": "Pornographie interdite",
-          "name_DE": "Verbotene Pornografie",
-          "definition_de": "Unter verbotener oder illegaler Pornografie versteht man Darstellungen, die sexuelle Handlungen mit Kindern, mit Tieren und/oder Gewalttätigkeiten zum Inhalt haben. Verboten ist sowohl das Herstellen, Verbreiten und Besitzen, als auch das Konsumieren solcher Aufnahmen (absolutes Verbot).",
-          "definition_fr": "Par pornographie interdite ou illégale, on entend des représentations d'actes sexuels impliquant des enfants, des animaux et/ou de la violence. Sont interdites aussi bien la fabrication, la diffusion et la possession de tels enregistrements que leur consommation (interdiction absolue).",
-              "values": [
-      {
-        "date": 2021,
-        "value": 2243
-      },
-      {
-        "date": 2022,
-        "value": 2594
-      },
-      {
-        "date": 2023,
-        "value": 2350
-      },
-      {
-        "date": 2024,
-        "value": 2705
-      },
-      {
-        "date": 2025,
-        "value": 2504
-      }
-    ]
-        },
-        {
-          "name_FR": "Grooming",
-          "name_DE": "Grooming",
-          "definition_de": "Knüpfen von sexuell motivierten Kontakten zu Kindern übers Internet, z.B. in Chatrooms oder über Social Media. Gewisse Täter streben ein Treffen im realen Leben an, um mit dem Opfer sexuelle Handlungen vorzunehmen.",
-          "definition_fr": "Le fait d'établir des contacts avec des enfants via Internet à des fins sexuelles, par exemple dans des forums de discussion ou sur les réseaux sociaux. Certains malfaiteurs visent une rencontre dans la vie réelle afin de se livrer à des actes sexuels avec la victime.",
-              "values": [
-      {
-        "date": 2021,
-        "value": 141
-      },
-      {
-        "date": 2022,
-        "value": 141
-      },
-      {
-        "date": 2023,
-        "value": 127
-      },
-      {
-        "date": 2024,
-        "value": 135
-      },
-      {
-        "date": 2025,
-        "value": 159
-      }
-    ]
-        },
-        {
-          "name_FR": "Sextorsion (sexe)",
-          "name_DE": "Sextortion (Sex)",
-          "definition_de": "Erpressung von weiterem Bildmaterial mit der Drohung, Nacktaufnahmen des Opfers zu veröffentlichen.",
-          "definition_fr": "Le fait de menacer une personne de publier des photos de nu d'elle afin d'obtenir d'autres images.",
-              "values": [
-      {
-        "date": 2021,
-        "value": 153
-      },
-      {
-        "date": 2022,
-        "value": 65
-      },
-      {
-        "date": 2023,
-        "value": 108
-      },
-      {
-        "date": 2024,
-        "value": 68
-      },
-      {
-        "date": 2025,
-        "value": 66
-      }
-    ]
-        },
-        {
-          "name_FR": "Live Streaming",
-          "name_DE": "Live Streaming",
-          "definition_de": "Teilhaben an sexuellen Handlungen mit Kindern via Webcam. Der Konsument / Anstifter meldet z.B. via Chat seine Wünsche, bezahlt den geforderten Betrag und konsumiert danach den sexuellen Missbrauch von Minderjährigen über Webcam.",
-          "definition_fr": "Le fait de prendre part, via une webcam, à des actes d'ordre sexuel impliquant des enfants. Le consommateur / instigateur communique ses souhaits, par exemple via un forum de discussion, puis paie le montant demandé et visionne ensuite via une webcam les abus commis sur des mineurs.",
-              "values": [
-      {
-        "date": 2021,
-        "value": 35
-      },
-      {
-        "date": 2022,
-        "value": 20
-      },
-      {
-        "date": 2023,
-        "value": 26
-      },
-      {
-        "date": 2024,
-        "value": 14
-      },
-      {
-        "date": 2025,
-        "value": 13
-      }
-    ]
-        }
-      ]
-    },
-    {
-      "name_FR": "Cyber-atteinte à la réputation et pratiques déloyales",
-      "name_DE": "Cyber Rufschädigung & unlauteres Verhalten",
-      "definition_de": "siehe Unterkategorien",
-      "definition_fr": "voir sous-catégories",
-          "values": [
-      {
-        "date": 2021,
-        "value": 1103
-      },
-      {
-        "date": 2022,
-        "value": 847
-      },
-      {
-        "date": 2023,
-        "value": 725
-      },
-      {
-        "date": 2024,
-        "value": 698
-      },
-      {
-        "date": 2025,
-        "value": 766
-      }
-    ],
-      "children": [
-        {
-          "name_FR": "Cybersquatting",
-          "name_DE": "Cybersquatting",
-          "definition_de": "Verwenden / Registrieren von leicht zu verwechselnden Domainnamen. Registrierung von Domainnamen, die dem Registrierenden eigentlich nicht zustehen oder die sehr ähnlich sind wie die Namen von Firmen, Behörden, Marken oder bekannten Personen (z.B. www.abmin.ch anstatt www.admin.ch).",
-          "definition_fr": "Utilisation / Enregistrement de noms de domaine faciles à confondre avec ceux de sites existants. Enregistrement de noms de domaine auxquels le titulaire ne peut pas prétendre, ou qui sont très similaires à des noms d'entreprises, d'autorités, de marques ou de personnes connues (par. ex. www.abmin.ch au lieu de www.admin.ch).",
-              "values": [
-      {
-        "date": 2021,
-        "value": 37
-      },
-      {
-        "date": 2022,
-        "value": 71
-      },
-      {
-        "date": 2023,
-        "value": 53
-      },
-      {
-        "date": 2024,
-        "value": 58
-      },
-      {
-        "date": 2025,
-        "value": 88
-      }
-    ]
-        },
-        {
-          "name_FR": "Cyber-atteinte à la réputation (business)",
-          "name_DE": "Cyber-Rufschädigung (geschäftlich)",
-          "definition_de": "Im Internet publizierte negative Kommentare, z.B. unrichtige, täuschende oder unnötig verletzende Behauptungen zu Produkten oder Dienstleistungen eines Dritten.",
-          "definition_fr": "Le fait de publier sur Internet des commentaires négatifs, par exemple des allégations inexactes, fallacieuses ou inutilement blessantes, à l'endroit des produits ou prestations d'un tiers.",
-              "values": [
-      {
-        "date": 2021,
-        "value": 107
-      },
-      {
-        "date": 2022,
-        "value": 69
-      },
-      {
-        "date": 2023,
-        "value": 58
-      },
-      {
-        "date": 2024,
-        "value": 54
-      },
-      {
-        "date": 2025,
-        "value": 68
-      }
-    ]
-        },
-        {
-          "name_FR": "Cyberbullying & Cybermobbing",
-          "name_DE": "Cyberbullying & Cybermobbing",
-          "definition_de": "Verleumdung, Blossstellung oder Belästigung von Personen durch Verbreitung von diffamierenden Texten, Bildern oder Filmen.",
-          "definition_fr": "Le fait de calomnier, d'humilier ou de harceler des personnes en diffusant des textes, des images ou des vidéos diffamatoires à leur sujet.",
-              "values": [
-      {
-        "date": 2021,
-        "value": 959
-      },
-      {
-        "date": 2022,
-        "value": 707
-      },
-      {
-        "date": 2023,
-        "value": 614
-      },
-      {
-        "date": 2024,
-        "value": 586
-      },
-      {
-        "date": 2025,
-        "value": 610
-      }
-    ]
-        }
-      ]
-    },
-        {
-          "name_FR": "Commerce illégal sur le darknet",
-          "name_DE": "Illegaler Handel im Darknet",
-          "definition_de": "Kauf/Verkauf von illegalen Gütern und Dienstleistungen im Darknet (Waffen, Betäubungsmittel, Medikamente, gestohlene Ware usw.).",
-          "definition_fr": "Achat / Vente de produits et services illégaux sur le Darknet (armes, stupéfiants, médicaments, marchandises volées, etc.).",
-              "values": [
-      {
-        "date": 2021,
-        "value": 1
-      },
-      {
-        "date": 2022,
-        "value": 0
-      },
-      {
-        "date": 2023,
-        "value": 4
-      },
-      {
-        "date": 2024,
-        "value": 0
-      },
-      {
-        "date": 2025,
-        "value": 0
-      }
-    ]
-        },
-        {
-          "name_FR": "Data leaking",
-          "name_DE": "Data leaking",
-          "definition_de": "Ideologisch oder finanziell motiviertes Weitergeben von vertraulichen Informationen.",
-          "definition_fr": "Transmission d'informations confidentielles pour des raisons idéologiques ou financières.",
-              "values": [
-      {
-        "date": 2021,
-        "value": 4
-      },
-      {
-        "date": 2022,
-        "value": 1
-      },
-      {
-        "date": 2023,
-        "value": 3
-      },
-      {
-        "date": 2024,
-        "value": 1
-      },
-      {
-        "date": 2025,
-        "value": 6
-      }
-    ]
-        }
-
-  ]
-}
+  }
 ]
