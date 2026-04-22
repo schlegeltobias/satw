@@ -30,7 +30,7 @@
       {
         "name_FR": "Cybercriminalité économique",
         "name_DE": "Cyber Wirtschaftskriminalität",
-        "definition_de": "siehe Unterkategorien",
+        "definition_de": "siehe Definitionen der Unterkategorien",
         "definition_fr": "voir sous-catégories",
         "values": [
           {
@@ -86,7 +86,7 @@
           {
             "name_FR": "Hacking",
             "name_DE": "Hacking",
-            "definition_de": "siehe Unterkategorien",
+            "definition_de": "siehe Definitionen der Unterkategorien",
             "definition_fr": "voir sous-catégories",
             "values": [
               {
@@ -194,7 +194,7 @@
                 "value": 327
               }
             ],
-            "definition_de": "siehe Unterkategorien",
+            "definition_de": "siehe Definitionen der Unterkategorien",
             "definition_fr": "voir sous-catégories",
             "children": [
               {
@@ -370,7 +370,7 @@
           {
             "name_FR": "Cyber-escroquerie",
             "name_DE": "Cyberbetrug",
-            "definition_de": "siehe Unterkategorien",
+            "definition_de": "siehe Definitionen der Unterkategorien",
             "definition_fr": "voir sous-catégories",
             "values": [
               {
@@ -852,7 +852,7 @@
       {
         "name_FR": "Cyber-délits sexuels",
         "name_DE": "Cyber Sexualdelikte",
-        "definition_de": "siehe Unterkategorien",
+        "definition_de": "siehe Definitionen der Unterkategorien",
         "definition_fr": "voir sous-catégories",
         "values": [
           {
@@ -994,7 +994,7 @@
       {
         "name_FR": "Cyber-atteinte à la réputation et pratiques déloyales",
         "name_DE": "Cyber Rufschädigung & unlauteres Verhalten",
-        "definition_de": "siehe Unterkategorien",
+        "definition_de": "siehe Definitionen der Unterkategorien",
         "definition_fr": "voir sous-catégories",
         "values": [
           {
