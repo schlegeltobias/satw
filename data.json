@@ -2,6 +2,7 @@
   {
     "name_FR": "Criminalité numérique",
     "name_DE": "Digitale Kriminalität",
+    "name_EN": "Digital Crime",
     "values": [
       {
         "date": 2021,
@@ -24,14 +25,17 @@
         "value": 57761
       }
     ],
+    "definition_en": "Digital crime (cybercrime) includes all digital offences committed mainly through telecommunication networks, especially the Internet.",
     "definition_de": "Die digitale Kriminalität (Cyberkriminalität) umfasst alle sogenannten 'digitalen' Straftaten, die im Wesentlichen den Straftaten entsprechen, die in Telekommunikationsnetzen, insbesondere im Internet, begangen werden. Die Identifizierung einer Straftat als Cyberdelikt erfolgt in der Polizeilichen Kriminalstatistik über den Modus Operandi.",
     "definition_fr": "La criminalité numérique (cybercriminalité) représente l’ensemble des infractions dites 'numériques' correspondant essentiellement aux infractions pénales commises sur les réseaux de télécommunication, en particulier Internet. L'identification d'une infraction propre à la cybercriminalité se fait via le modus operandi dans la statistique policière de la criminalité.",
     "children": [
       {
         "name_FR": "Cybercriminalité économique",
         "name_DE": "Cyber Wirtschaftskriminalität",
-        "definition_de": "siehe Definitionen der Unterkategorien",
-        "definition_fr": "voir sous-catégories",
+        "name_EN": "Cyber economic crime",
+        "definition_en": "See definitions of the subcategories.",
+        "definition_de": "Siehe Definitionen der Unterkategorien.",
+        "definition_fr": "Voir sous-catégories.",
         "values": [
           {
             "date": 2021,
@@ -58,6 +62,8 @@
           {
             "name_FR": "Phishing",
             "name_DE": "Phishing",
+            "name_EN": "Phishing",
+            "definition_en": "Unauthorized acquisition of personal and/or confidential data.",
             "definition_de": "Erhältlich machen von persönlichen und/oder vertraulichen Daten in unbefugter Weise.",
             "definition_fr": "Rendre accessibles des données personnelles ou confidentielles de manière illicite.",
             "values": [
@@ -86,8 +92,10 @@
           {
             "name_FR": "Hacking",
             "name_DE": "Hacking",
-            "definition_de": "siehe Definitionen der Unterkategorien",
-            "definition_fr": "voir sous-catégories",
+            "name_EN": "Hacking",
+            "definition_en": "See definitions of the subcategories.",
+            "definition_de": "Siehe Definitionen der Unterkategorien.",
+            "definition_fr": "Voir sous-catégories.",
             "values": [
               {
                 "date": 2021,
@@ -114,6 +122,8 @@
               {
                 "name_FR": "Pénétrer un système informatique de force",
                 "name_DE": "Gewaltsames Eindringen in Datenverarbeitungssystem",
+                "name_EN": "Forced intrusion into data processing system",
+                "definition_en": "Forcibly gaining unauthorized access to a computer system in order to steal personal data or alter its contents for fraudulent or political-religious purposes (hacktivism).",
                 "definition_de": "Gewaltsames Eindringen in ein Datenverarbeitungssystem, um Personendaten zu entwenden oder die Inhalte zu betrügerischen oder politisch-religiösen Zwecken zu verändern (Hacktivismus).",
                 "definition_fr": "Hacker un site web dans le but de voler les données de la personne enregistrée ou inscrites sur les serveurs du site web ou d'en modifier le contenu pour des raisons politico-religieuses (hacktivisme).",
                 "values": [
@@ -142,6 +152,8 @@
               {
                 "name_FR": "Accéder sans un système informatique au moyen de codes d'accès externes",
                 "name_DE": "Eindringen in Datenverarbeitungssystem mit fremden Zugangsdaten",
+                "name_EN": "Intrusion into data processing system using stolen credentials",
+                "definition_en": "Gaining unauthorized access to a computer system using someone else's login credentials in order to steal personal data or alter content for fraudulent or political-religious purposes (hacktivism).",
                 "definition_de": "Eindringen in ein Datenverarbeitungssystem mit fremden Zugangsdaten, um Personendaten zu entwenden oder die Inhalte zu betrügerischen oder politisch-religiösen Zwecken zu verändern (Hacktivismus).",
                 "definition_fr": "Accéder indument dans un système informatique au moyen de données d'accès externes, dans le but de soutirer des données personnelles, ou d’en modifier le contenu à des fins frauduleuses ou politico-religieuses (hacktivisme).",
                 "values": [
@@ -172,6 +184,7 @@
           {
             "name_FR": "Malware",
             "name_DE": "Malware",
+            "name_EN": "Malware",
             "values": [
               {
                 "date": 2021,
@@ -194,12 +207,15 @@
                 "value": 327
               }
             ],
-            "definition_de": "siehe Definitionen der Unterkategorien",
-            "definition_fr": "voir sous-catégories",
+            "definition_en": "See definitions of the subcategories.",
+            "definition_de": "Siehe Definitionen der Unterkategorien.",
+            "definition_fr": "Voir sous-catégories.",
             "children": [
               {
                 "name_FR": "Ransomware",
                 "name_DE": "Ransomware",
+                "name_EN": "Ransomware",
+                "definition_en": "Lock or encrypt a computer system and demand a ransom for decryption. Ransomware is malware that—once activated—encrypts the victim’s computer or smartphone data and demands a ransom for decryption. In one variant of this, the computer or smartphone (sometimes just the browser) is infected and locked. A message then appears, purporting to be from an official authority, which demands that the victim pay a fine using digital currency or electronic payment methods in order to have the system unlocked.",
                 "definition_de": "Informatiksystem sperren/verschlüsseln und Geldforderung als Freikauf für die Entschlüsselung stellen. Ransomware ist eine Schadsoftware, die – einmal aktiviert – die Computer- oder Smartphonedaten des Opfers verschlüsselt und eine Geldforderung für die Entschlüsselung stellt. In einer Variante davon wird der Computer oder das Smartphone (manchmal einzig der Browser) infiziert und gesperrt. Sodann erscheint eine vermeintlich behördliche Mitteilung, welche die betroffene Person zu einer Bussenzahlung mittels digitaler Währung bzw. elektronischer Zahlungsmittel auffordert, damit das Informatiksystem wieder entsperrt wird.",
                 "definition_fr": "Bloquer/Chiffrer un système informatique et demander une rançon. Un Ransomware est un logiciel malveillant qui, une fois activé, chiffre les données de l’ordinateur ou du smartphone de la victime et requiert une somme d’argent pour les déverrouiller. Une autre version infecte et bloque l'ordinateur ou le smartphone (parfois aussi seulement le navigateur). Il envoie alors une notification apparemment officielle exigeant de la victime le paiement d'une amende en monnaie virtuelle, respectivement par le biais d’un moyen de paiement électronique, pour débloquer le système informatique.",
                 "values": [
@@ -228,6 +244,8 @@
               {
                 "name_FR": "Cheval de Troie e-banking",
                 "name_DE": "E-Banking Trojaner",
+                "name_EN": "E-Banking trojan",
+                "definition_en": "Hijacking / taking over a session. Infection of the computer system with malware that enables the hijacking of online banking sessions and the unauthorized initiation of financial transactions to domestic and foreign accounts. Infection of smartphones with additional malware to intercept messages from authentication mechanisms.",
                 "definition_de": "Übernehmen / Steuern einer Sitzung. Infektion des Datenverarbeitungssystems mit Schadsoftware, die es ermöglicht, E-Banking-Sitzungen zu übernehmen und unbemerkt Geld-Transaktionen auf in- und ausländische Konten auszulösen. Infektion von Smartphones mit zusätzlicher Schadsoftware, um Nachrichten von Authentifizierungs- mechanismen abzufangen.",
                 "definition_fr": "Prise en main d'une session. Infection du système de traitement des données à l'aide d'un logiciel malveillant (dit malware ou maliciel) qui permet d'ouvrir des sessions d'e-banking et de générer, de manière inaperçue, des transferts d'argent sur des comptes en Suisse et à l'étranger ; infection de smartphones via un malware supplémentaire qui intercepte les messages envoyés par les mécanismes d'authentification.",
                 "values": [
@@ -256,7 +274,9 @@
               {
                 "name_FR": "Spyware",
                 "name_DE": "Spyware",
-                "definition_de": "Infizierung eines Informatiksystems (wie Computer, Smartphone) mit einer Schadsoft-ware, die die Aktivitäten der Nutzerin oder des Nutzers ausspioniert (z. B. besuchte Webseiten) und die Daten via Internetverbindung an die Täterschaft übermittelt.",
+                "name_EN": "Spyware",
+                "definition_en": "The infection of an IT system (such as a computer or smartphone) with malware that spies on the user’s activities (e.g., websites visited) and transmits the data to the perpetrators via an internet connection.",
+                "definition_de": "Infizierung eines Informatiksystems (wie Computer, Smartphone) mit einer Schadsoftware, die die Aktivitäten der Nutzerin oder des Nutzers ausspioniert (z. B. besuchte Webseiten) und die Daten via Internetverbindung an die Täterschaft übermittelt.",
                 "definition_fr": "Infection d'un système informatique (ordinateur, smartphone, etc.) par un logiciel malveillant permettant d’espionner les activités (p. ex. sites web consultés) de l’utilisateur et transmettre les données ainsi obtenues à l’auteur via une connexion Internet.",
                 "values": [
                   {
@@ -284,6 +304,8 @@
               {
                 "name_FR": "Rogueware & Scareware",
                 "name_DE": "Rogueware & Scareware",
+                "name_EN": "Rogueware & scareware",
+                "definition_en": "A message appears on the computer screen (or the screen of another IT system) stating that the computer is infected and that you need to install a program to resolve the issue.",
                 "definition_de": "Auf dem Bildschirm des Computers (oder eines anderen Informatiksystems) erscheint die Mitteilung, der Computer sei infiziert und man müsse ein Programm installieren, um die Situation zu kontrollieren.",
                 "definition_fr": "Un message s'affiche sur l'ordinateur (ou un autre système informatique) qui alarme la victime que son ordinateur est infecté et qu'il s'agit d'installer un programme pour remédier à cette situation.",
                 "values": [
@@ -312,6 +334,8 @@
               {
                 "name_FR": "Botnet",
                 "name_DE": "Botnet",
+                "name_EN": "Botnet",
+                "definition_en": "A botnet is a group of computers that have been infected by one or more pieces of malware. Such a network of infected computers (also known as zombies or bots) can be controlled and activated by cybercriminals to carry out criminal activities.",
                 "definition_de": "Botnet ist die Bezeichnung für eine Gruppe von Computern, die von einer oder mehreren Malware infiziert wurden. Ein solches Netz von befallenen Computern (auch Zombies oder Bots genannt) kann von Cyberkriminellen kontrolliert und aktiviert werden, um kriminelle Handlungen zu begehen.",
                 "definition_fr": "Le terme 'botnet' désigne un groupe d'ordinateurs qui ont été contaminés par un ou plusieurs malwares. Un tel réseau d'ordinateurs compromis (aussi appelés des 'zombies' ou 'bots'), contrôlé par les cybercriminels, peut être activé par ces derniers pour exécuter des actions malveillantes.",
                 "values": [
@@ -342,6 +366,8 @@
           {
             "name_FR": "DDOS",
             "name_DE": "DDOS",
+            "name_EN": "DDOS",
+            "definition_en": "Attacking the availability of a data processing system by overloading it. DDoS (Distributed Denial of Service) attacks are carried out simultaneously by multiple computers.",
             "definition_de": "Angreifen der Verfügbarkeit eines Datenverarbeitungssystems durch Überlast. DDoS (Distributed Denial of Service) Angriffe werden gleichzeitig durch mehrere Rechner ausgeführt.",
             "definition_fr": "Attaque visant à surcharger un système informatique pour le rendre indisponible. Les attaques DDoS (Distributed Denial of Service = déni de service) sont menées simultanément par plusieurs ordinateurs.",
             "values": [
@@ -370,8 +396,10 @@
           {
             "name_FR": "Cyber-escroquerie",
             "name_DE": "Cyberbetrug",
-            "definition_de": "siehe Definitionen der Unterkategorien",
-            "definition_fr": "voir sous-catégories",
+            "name_EN": "Cyber fraud",
+            "definition_en": "See definitions of the subcategories.",
+            "definition_de": "Siehe Definitionen der Unterkategorien.",
+            "definition_fr": "Voir sous-catégories.",
             "values": [
               {
                 "date": 2021,
@@ -398,6 +426,8 @@
               {
                 "name_FR": "CEO/BEC Fraud",
                 "name_DE": "CEO/BEC Betrug",
+                "name_EN": "CEO/BEC fraud",
+                "definition_en": "The perpetrators pose as representatives of a company (claiming to be its CEO, an employee, or a lawyer) and persuade a business partner of that company or an employee there to transfer money to an unusual overseas account.",
                 "definition_de": "Die Täter geben sich als Vertreter eines Unternehmen aus (behaupten, deren CEO, Mitarbeiter oder Anwalt zu sein) und veranlassen einen Geschäftspartner dieses Unternehmens oder eine dort angestellte Person, Geld auf ein ungewöhnliches Konto im Ausland zu überweisen.",
                 "definition_fr": "Se faire passer pour un représentant d'une entreprise (président, employé, avocat) et inciter un partenaire commercial de l'entreprise ou un employé à verser de l'argent sur un compte inhabituel à l'étranger.",
                 "values": [
@@ -426,6 +456,8 @@
               {
                 "name_FR": "Magasins en ligne frauduleux",
                 "name_DE": "Betrügerische Internetshops",
+                "name_EN": "Fraudulent online shops",
+                "definition_en": "The perpetrators pose as representatives of a company (claiming to be its CEO, an employee, or a lawyer) and persuade a business partner of that company or an employee there to transfer money to an unusual overseas account.",
                 "definition_de": "Die Täter geben sich als Vertreter eines Unternehmen aus (behaupten, deren CEO, Mitarbeiter oder Anwalt zu sein) und veranlassen einen Geschäftspartner dieses Unternehmens oder eine dort angestellte Person, Geld auf ein ungewöhnliches Konto im Ausland zu überweisen.",
                 "definition_fr": "Un acheteur commande et paie des marchandises dans un magasin en ligne (frauduleux), mais ne les reçoit jamais, ou alors il reçoit des contrefaçons ou des marchandises défectueuses ou de valeur inférieure.",
                 "values": [
@@ -454,6 +486,8 @@
               {
                 "name_FR": "Fausses annonces immobilières",
                 "name_DE": "Falsche Immobilienanzeigen",
+                "name_EN": "Fake real estate listings",
+                "definition_en": "The perpetrators post a fake real estate listing on a real estate or classifieds website and ask interested parties to pay a deposit in advance.",
                 "definition_de": "Die Täterschaft publiziert eine falsche Immobilienanzeige auf einer Seite mit Immobilien- oder Kleinanzeigen und verlangt von den interessierten Personen, dass sie im Voraus eine Kaution bezahlen.",
                 "definition_fr": "Les auteurs publient une fausse annonce immobilière sur un site de petites annonces et demandent aux intéressés de verser à l'avance une caution.",
                 "values": [
@@ -482,6 +516,8 @@
               {
                 "name_FR": "Fausses requêtes d'aide",
                 "name_DE": "Falsche Untrestützungsanfragen",
+                "name_EN": "Fake support requests",
+                "definition_en": "A type of fraud in which perpetrators use hacked accounts (email, social media, chat, etc.) to send fake requests for assistance—typically of a financial nature—to the account holder’s contacts on the account holder’s behalf.",
                 "definition_de": "Betrug, bei dem die Täter von gehackten Konten (Email, Social Media, Chat, usw.), im Namen des Kontoinhabers, falsche Unterstützungsanfragen an dessen Kontakte senden (Anfragen finanzieller Natur).",
                 "definition_fr": "Escroquerie consistant à envoyer de fausses requêtes d'aide (financière) aux contacts des comptes piratés (e-mail, médias sociaux, chat, etc.) au nom du titulaire du compte.",
                 "values": [
@@ -510,6 +546,8 @@
               {
                 "name_FR": "Fraude à la commission",
                 "name_DE": "Vorausschussbetrug",
+                "name_EN": "Advance fee fraud",
+                "definition_en": "A type of fraud that requires an upfront payment. The scammer contacts the victim with the aim of having them cover the costs or fees associated with releasing a purportedly large sum of money.",
                 "definition_de": "Betrugsformen, bei der ein Vorschuss geleistet werden muss. Kontaktaufnahme mit dem Ziel, die Kosten/Gebühren für die Freigabe einer angeblichen grösseren Geldsumme zu übernehmen.",
                 "definition_fr": "Type d'escroquerie impliquant le versement d'une commission. Les auteurs prennent contact avec la victime pour qu'elle verse de l'argent pour pouvoir recevoir une somme plus importante, ce qui ne sera pas le cas en fin de compte.",
                 "values": [
@@ -538,6 +576,8 @@
               {
                 "name_FR": "Arnaque au faux support technique",
                 "name_DE": "Betrügerischer technischer Support",
+                "name_EN": "Fraudulent technical support",
+                "definition_en": "A scam in which the perpetrators call potential victims in Switzerland, pose as technical support staff (from Microsoft, Apple, etc.), and claim that there is a problem with the victim’s computer that they can resolve. Once the perpetrators have gained control of the computer, they carry out criminal activities with the intent of financial gain.",
                 "definition_de": "Betrug, bei dem die Täterschaft potenzielle Opfer in der Schweiz anruft, sich als Mitarbeiter des technischen Supports (Microsoft, Apple, usw.) ausgibt und behauptet, dass auf dem Computer des Opfers ein Problem vorhanden sei, welches sie lösen können. Nachdem die Täterschaft die Kontrolle über den Computer übernommen hat, nimmt sie kriminelle Handlungen vor, in der Absicht, sich finanziell zu bereichern.",
                 "definition_fr": "Escroquerie où les auteurs téléphonent à de potentielles victimes en Suisse en se faisant passer pour des collaborateurs d'assistance technique (Microsoft, Apple, etc.) et prétendent que l'ordinateur de l'appelé rencontre un problème qu'ils sont en mesure de résoudre. Après avoir pris le contrôle de l'ordinateur, les auteurs entreprennent des actions dommageables dans le but de s'enrichir.",
                 "values": [
@@ -566,6 +606,8 @@
               {
                 "name_FR": "Romance scam",
                 "name_DE": "Romance scam",
+                "name_EN": "Romance scam",
+                "definition_en": "Faking a romantic (or friendly) relationship in order to then demand money (often citing a fictitious hardship).",
                 "definition_de": "Vortäuschen einer Liebes- (Freundes-)beziehung, um dann Geld zu verlangen (häufig wegen eines fiktiven Härtefalls).",
                 "definition_fr": "Établissement d'une prétendue relation amoureuse ou amicale pour ensuite exiger de l'argent (souvent sous prétexte de difficultés personnelles).",
                 "values": [
@@ -594,6 +636,7 @@
               {
                 "name_FR": "Fraudes via les petites annonces",
                 "name_DE": "Betrug mit Kleinanzeigen",
+                "name_EN": "Classified ad fraud",
                 "values": [
                   {
                     "date": 2021,
@@ -602,7 +645,7 @@
                   {
                     "date": 2022,
                     "value": 9010
-                                    },
+                  },
                   {
                     "date": 2023,
                     "value": 11013
@@ -616,70 +659,77 @@
                     "value": 9457
                   }
                 ],
+                "definition_en": "The perpetrators post a fraudulent ad on classifieds and online platforms.",
                 "definition_de": "Ein betrügerisches Angebot wird auf Kleinanzeige- und Onlineplattformen von der Täterschaft publiziert.",
                 "definition_fr": "Les auteurs publient des annonces frauduleuses sur des sites en ligne.",
                 "children": [
-              {
-                "name_FR": "Petites annonces (objet vendue non payé)",
-                "name_DE": "Kleinanzeigenplattform: Waren nicht bezahlt",
-                "definition_de": "Die Ware wird vom Verkäufer gesendet, jedoch nicht bezahlt.",
-                "definition_fr": "La marchandise est livrée par le vendeur mais n'est pas payée.",
-                "values": [
                   {
-                    "date": 2021,
-                    "value": 646
+                    "name_FR": "Petites annonces (objet vendue non payé)",
+                    "name_DE": "Kleinanzeigenplattform: Waren nicht bezahlt",
+                    "name_EN": "Classified platform: goods not paid",
+                    "definition_en": "The item is shipped by the seller but has not been paid for.",
+                    "definition_de": "Die Ware wird vom Verkäufer gesendet, jedoch nicht bezahlt.",
+                    "definition_fr": "La marchandise est livrée par le vendeur mais n'est pas payée.",
+                    "values": [
+                      {
+                        "date": 2021,
+                        "value": 646
+                      },
+                      {
+                        "date": 2022,
+                        "value": 527
+                      },
+                      {
+                        "date": 2023,
+                        "value": 570
+                      },
+                      {
+                        "date": 2024,
+                        "value": 448
+                      },
+                      {
+                        "date": 2025,
+                        "value": 352
+                      }
+                    ]
                   },
                   {
-                    "date": 2022,
-                    "value": 527
-                  },
-                  {
-                    "date": 2023,
-                    "value": 570
-                  },
-                  {
-                    "date": 2024,
-                    "value": 448
-                  },
-                  {
-                    "date": 2025,
-                    "value": 352
+                    "name_FR": "Petites annonces (objet payé non livré)",
+                    "name_DE": "Kleinanzeigenplattform: Waren nicht geliefert",
+                    "name_EN": "Classified Platform: goods not delivered",
+                    "definition_en": "The buyer pays for the goods, but they are never delivered.",
+                    "definition_de": "Der Käufer bezahlt die Ware, diese wird jedoch nie geliefert.",
+                    "definition_fr": "L'acheteur paie la marchandise, qui ne sera toutefois jamais livrée.",
+                    "values": [
+                      {
+                        "date": 2021,
+                        "value": 6884
+                      },
+                      {
+                        "date": 2022,
+                        "value": 8483
+                      },
+                      {
+                        "date": 2023,
+                        "value": 10443
+                      },
+                      {
+                        "date": 2024,
+                        "value": 10625
+                      },
+                      {
+                        "date": 2025,
+                        "value": 9105
+                      }
+                    ]
                   }
                 ]
               },
               {
-                "name_FR": "Petites annonces (objet payé non livré)",
-                "name_DE": "Kleinanzeigenplattform: Waren nicht geliefert",
-                "definition_de": "Der Käufer bezahlt die Ware, diese wird jedoch nie geliefert.",
-                "definition_fr": "L'acheteur paie la marchandise, qui ne sera toutefois jamais livrée.",
-                "values": [
-                  {
-                    "date": 2021,
-                    "value": 6884
-                  },
-                  {
-                    "date": 2022,
-                    "value": 8483
-                  },
-                  {
-                    "date": 2023,
-                    "value": 10443
-                  },
-                  {
-                    "date": 2024,
-                    "value": 10625
-                  },
-                  {
-                    "date": 2025,
-                    "value": 9105
-                  }
-                ]
-              }
-            ]
-          },
-              {
                 "name_FR": "Abus d'identité/de sytèmes de paiement personneles",
                 "name_DE": "Missbrauch von Online-Zahlungssystem / fremder Identität",
+                "name_EN": "Misuse of online payment systems / identity theft",
+                "definition_en": "The theft of another person’s payment system or identity theft (or the unauthorized use of another person’s identifying information) for fraudulent purposes.",
                 "definition_de": "Diebstahl eines fremden persönlichen Zahlungssystems oder Identitätsdiebstahl (oder widerrechtlicher Gebrauch eines Identifikationsmerkmals einer anderen Person) für betrügerische Zwecke.",
                 "definition_fr": "Usurper des systèmes de paiement personnels, ou usurper l'identité (ou toute donnée d'identification personnelle) pour commettre des fraudes.",
                 "values": [
@@ -708,6 +758,8 @@
               {
                 "name_FR": "Fraude à l'investissement en ligne",
                 "name_DE": "Online Anlagebetrug",
+                "name_EN": "Online investment fraud",
+                "definition_en": "To persuade someone to invest in a specific product even though it does not exist or has no value or potential for profit. The trading (buying/selling) of these products is faked for the victim but does not actually take place.",
                 "definition_de": "Jemanden dazu veranlassen, in ein bestimmtes Produkt zu investieren, obwohl dieses nicht existiert oder keinen Wert resp. keine Ertragsaussichten hat. Der Handel (Kauf / Verkauf) dieser Produkte werden dem Opfer vorgetäuscht, findet aber effektiv nicht statt.",
                 "definition_fr": "Inciter quelqu’un à investir dans tel ou tel produit financier, celui-ci étant inexistant ou sans aucune valeur ou perspective de gains. Le commerce de ces produits (achat / vente) est simulé et n’a donc effectivement pas lieu.",
                 "values": [
@@ -736,6 +788,8 @@
               {
                 "name_FR": "Autre cyber-escroquerie",
                 "name_DE": "Anderer Internetbetrug",
+                "name_EN": "Other tnternet fraud",
+                "definition_en": "Any other type of fraud committed via a telecommunications network or by means of such a network.",
                 "definition_de": "Jede andere Art von Betrug, die über ein Telekommunikationsnetz oder mittels eines solchen durchgeführt wird.",
                 "definition_fr": "Tout autre type d'escroquerie réalisée sur ou au moyen d'un réseau de télécommunication.",
                 "values": [
@@ -766,6 +820,8 @@
           {
             "name_FR": "Money & Package Mules",
             "name_DE": "Money & Package Mules",
+            "name_EN": "Money & package mules",
+            "definition_en": "The transfer of funds or goods of criminal origin through third parties (financial agents: money mules; package agents: package mules). These third parties are usually recruited online through classified ads for part-time jobs.",
             "definition_de": "Weiterleiten lassen von Gelder oder Waren krimineller Herkunft durch Dritte (Finanzagenten: money mules, Paketagenten: package mules). Diese Drittpersonen werden meistens über das Internet via Kleinanzeigen für Teilzeitstellen rekrutiert.",
             "definition_fr": "Le fait de faire transférer de l'argent ou des marchandises d'origine criminelle par des tiers, pour la plupart recrutés sur Internet à travers de petites annonces de travail à temps partiel (personnes qui transfèrent de l'argent d'un pays à l'autre : money mules ; personnes qui acheminent des colis vers une autre destination : package mules).",
             "values": [
@@ -794,6 +850,8 @@
           {
             "name_FR": "Sextorsion (money)",
             "name_DE": "Sextortion (Geld)",
+            "name_EN": "Sextortion (money)",
+            "definition_en": "Extortion of money using nude photos or video clips in which the victim performs sexual acts on themselves (masturbates), and threats to post the video on YouTube or send it, for example, to the victim’s Facebook friends.",
             "definition_de": "Erpressung von Geld mittels Nacktaufnahmen oder Videoclips, auf welchen das Opfer sexuelle Handlungen an sich vornimmt (masturbiert), und Androhung der Veröffentlichung des Videos auf YouTube oder des Versands z.B. an Facebook-Freunde des Opfers.",
             "definition_fr": "Action consistant à extorquer de l'argent à une personne au moyen de photos de nu ou de vidéos sur lesquelles la victime se masturbe et à la menacer de publier la vidéo sur YouTube ou de l'envoyer par exemple à ses amis sur Facebook.",
             "values": [
@@ -822,6 +880,8 @@
           {
             "name_FR": "Vol de crypto-monnaies",
             "name_DE": "Krypto-Diebstahl",
+            "name_EN": "Crypto theft",
+            "definition_en": "Cryptocurrencies are stolen from an exchange or a personal wallet. Theft of a hardware wallet.",
             "definition_de": "Kryptowährungen werden bei einem Exchanger oder von einem persönlichen Wallet gestohlen. Diebstahl eines Hardware Wallets.",
             "definition_fr": "Vol de cryptomonnaies sur une plate-forme d'échange ou dans un portefeuille personnel. Vol d'un portefeuille physique.",
             "values": [
@@ -852,8 +912,10 @@
       {
         "name_FR": "Cyber-délits sexuels",
         "name_DE": "Cyber Sexualdelikte",
-        "definition_de": "siehe Definitionen der Unterkategorien",
-        "definition_fr": "voir sous-catégories",
+        "name_EN": "Cyber sexual offences",
+        "definition_en": "See definitions of the subcategories.",
+        "definition_de": "Siehe Definitionen der Unterkategorien.",
+        "definition_fr": "Voir sous-catégories.",
         "values": [
           {
             "date": 2021,
@@ -880,6 +942,8 @@
           {
             "name_FR": "Pornographie interdite",
             "name_DE": "Verbotene Pornografie",
+            "name_EN": "Illegal pornography",
+            "definition_en": "Prohibited or illegal pornography refers to depictions that involve sexual acts with children, animals, and/or acts of violence. The production, distribution, and possession of such material, as well as its consumption, are prohibited (absolute prohibition).",
             "definition_de": "Unter verbotener oder illegaler Pornografie versteht man Darstellungen, die sexuelle Handlungen mit Kindern, mit Tieren und/oder Gewalttätigkeiten zum Inhalt haben. Verboten ist sowohl das Herstellen, Verbreiten und Besitzen, als auch das Konsumieren solcher Aufnahmen (absolutes Verbot).",
             "definition_fr": "Par pornographie interdite ou illégale, on entend des représentations d'actes sexuels impliquant des enfants, des animaux et/ou de la violence. Sont interdites aussi bien la fabrication, la diffusion et la possession de tels enregistrements que leur consommation (interdiction absolue).",
             "values": [
@@ -908,6 +972,8 @@
           {
             "name_FR": "Grooming",
             "name_DE": "Grooming",
+            "name_EN": "Grooming",
+            "definition_en": "Establishing sexually motivated contact with children online, e.g., in chat rooms or via social media. Some offenders seek to meet the victim in person in order to engage in sexual acts with them.",
             "definition_de": "Knüpfen von sexuell motivierten Kontakten zu Kindern übers Internet, z.B. in Chatrooms oder über Social Media. Gewisse Täter streben ein Treffen im realen Leben an, um mit dem Opfer sexuelle Handlungen vorzunehmen.",
             "definition_fr": "Le fait d'établir des contacts avec des enfants via Internet à des fins sexuelles, par exemple dans des forums de discussion ou sur les réseaux sociaux. Certains malfaiteurs visent une rencontre dans la vie réelle afin de se livrer à des actes sexuels avec la victime.",
             "values": [
@@ -936,6 +1002,8 @@
           {
             "name_FR": "Sextorsion (sexe)",
             "name_DE": "Sextortion (Sex)",
+            "name_EN": "Sextortion (sex)",
+            "definition_en": "Extortion of additional images by threatening to publish nude photos of the victim.",
             "definition_de": "Erpressung von weiterem Bildmaterial mit der Drohung, Nacktaufnahmen des Opfers zu veröffentlichen.",
             "definition_fr": "Le fait de menacer une personne de publier des photos de nu d'elle afin d'obtenir d'autres images.",
             "values": [
@@ -964,6 +1032,8 @@
           {
             "name_FR": "Live Streaming",
             "name_DE": "Live Streaming",
+            "name_EN": "Live streaming",
+            "definition_en": "Participating in sexual acts involving children via webcam. The user/instigator communicates their desires—for example, via chat—pays the requested amount, and then watches the sexual abuse of minors via webcam.",
             "definition_de": "Teilhaben an sexuellen Handlungen mit Kindern via Webcam. Der Konsument / Anstifter meldet z.B. via Chat seine Wünsche, bezahlt den geforderten Betrag und konsumiert danach den sexuellen Missbrauch von Minderjährigen über Webcam.",
             "definition_fr": "Le fait de prendre part, via une webcam, à des actes d'ordre sexuel impliquant des enfants. Le consommateur / instigateur communique ses souhaits, par exemple via un forum de discussion, puis paie le montant demandé et visionne ensuite via une webcam les abus commis sur des mineurs.",
             "values": [
@@ -994,8 +1064,10 @@
       {
         "name_FR": "Cyber-atteinte à la réputation et pratiques déloyales",
         "name_DE": "Cyber Rufschädigung & unlauteres Verhalten",
-        "definition_de": "siehe Definitionen der Unterkategorien",
-        "definition_fr": "voir sous-catégories",
+        "name_EN": "Cyber defamation & unfair conduct",
+        "definition_en": "See definitions of the subcategories.",
+        "definition_de": "Siehe Definitionen der Unterkategorien.",
+        "definition_fr": "Voir sous-catégories.",
         "values": [
           {
             "date": 2021,
@@ -1022,6 +1094,8 @@
           {
             "name_FR": "Cybersquatting",
             "name_DE": "Cybersquatting",
+            "name_EN": "Cybersquatting",
+            "definition_en": "Use or registration of domain names that are easily confused. Registration of domain names to which the registrant is not actually entitled, or that are very similar to the names of companies, government agencies, trademarks, or well-known individuals (e.g., www.abmin.ch instead of www.admin.ch).",
             "definition_de": "Verwenden / Registrieren von leicht zu verwechselnden Domainnamen. Registrierung von Domainnamen, die dem Registrierenden eigentlich nicht zustehen oder die sehr ähnlich sind wie die Namen von Firmen, Behörden, Marken oder bekannten Personen (z.B. www.abmin.ch anstatt www.admin.ch).",
             "definition_fr": "Utilisation / Enregistrement de noms de domaine faciles à confondre avec ceux de sites existants. Enregistrement de noms de domaine auxquels le titulaire ne peut pas prétendre, ou qui sont très similaires à des noms d'entreprises, d'autorités, de marques ou de personnes connues (par. ex. www.abmin.ch au lieu de www.admin.ch).",
             "values": [
@@ -1050,6 +1124,8 @@
           {
             "name_FR": "Cyber-atteinte à la réputation (business)",
             "name_DE": "Cyber-Rufschädigung (geschäftlich)",
+            "name_EN": "Cyber defamation (business)",
+            "definition_en": "Negative comments posted online, such as false, misleading, or unnecessarily offensive statements about a third party’s products or services.",
             "definition_de": "Im Internet publizierte negative Kommentare, z.B. unrichtige, täuschende oder unnötig verletzende Behauptungen zu Produkten oder Dienstleistungen eines Dritten.",
             "definition_fr": "Le fait de publier sur Internet des commentaires négatifs, par exemple des allégations inexactes, fallacieuses ou inutilement blessantes, à l'endroit des produits ou prestations d'un tiers.",
             "values": [
@@ -1078,6 +1154,8 @@
           {
             "name_FR": "Cyberbullying & Cybermobbing",
             "name_DE": "Cyberbullying & Cybermobbing",
+            "name_EN": "Cyberbullying & cybermobbing",
+            "definition_en": "Slander, defamation, or harassment of individuals through the dissemination of defamatory texts, images, or videos.",
             "definition_de": "Verleumdung, Blossstellung oder Belästigung von Personen durch Verbreitung von diffamierenden Texten, Bildern oder Filmen.",
             "definition_fr": "Le fait de calomnier, d'humilier ou de harceler des personnes en diffusant des textes, des images ou des vidéos diffamatoires à leur sujet.",
             "values": [
@@ -1108,6 +1186,8 @@
       {
         "name_FR": "Commerce illégal sur le darknet",
         "name_DE": "Illegaler Handel im Darknet",
+        "name_EN": "Illegal trade on the darknet",
+        "definition_en": "Buying and selling illegal goods and services on the darknet.",
         "definition_de": "Kauf/Verkauf von illegalen Gütern und Dienstleistungen im Darknet (Waffen, Betäubungsmittel, Medikamente, gestohlene Ware usw.).",
         "definition_fr": "Achat / Vente de produits et services illégaux sur le Darknet (armes, stupéfiants, médicaments, marchandises volées, etc.).",
         "values": [
@@ -1136,6 +1216,8 @@
       {
         "name_FR": "Data leaking",
         "name_DE": "Data leaking",
+        "name_EN": "Data leaking",
+        "definition_en": "Ideologically or financially motivated disclosure of confidential information.",
         "definition_de": "Ideologisch oder finanziell motiviertes Weitergeben von vertraulichen Informationen.",
         "definition_fr": "Transmission d'informations confidentielles pour des raisons idéologiques ou financières.",
         "values": [
